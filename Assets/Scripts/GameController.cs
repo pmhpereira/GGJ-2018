@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
 {
 
     public enum GameState { None, Start, Playing, GameOver }
+    public GameState gameState { get { return m_CurrentGameState; }}
     private GameState m_CurrentGameState = GameState.None;
     private GameState m_PreviousGameState = GameState.None;
 
@@ -32,6 +33,8 @@ public class GameController : MonoBehaviour
 
     [Header("References")]
     [SerializeField]
+    private Transform m_MainMenu;
+    [SerializeField]
     private HUDController m_Hud;
     [SerializeField]
     private PlayerController m_Player1Prefab;
@@ -52,11 +55,18 @@ public class GameController : MonoBehaviour
     }
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
+        _Init();
 
+        //change this to on start game click?
+        _ChangeState(GameState.Start);
+    }
+
+    private void _Init(){
         //instantiate first level?
-        if (m_LevelsPrefabs != null)
-            _ResetLevel();
+        m_CurrentLevelIndex = 0;
+        LoadLevel(m_CurrentLevelIndex);
 
         float playerLife = levelTime / 2f;
 
@@ -66,14 +76,10 @@ public class GameController : MonoBehaviour
         //load hud
         m_Hud.Init(playerLife, m_Players);
 
-        //load start menu?
+    }
 
-        //change this to on start game click?
-        _ChangeState(GameState.Start);
-
-	}
-
-    private void _InitPlayers(float playerLife){
+    private void _InitPlayers(float playerLife)
+    {
 
         Data.Player p1 = new Data.Player(0, playerLife, playerSpeed);
         m_Players[0] = p1;
@@ -117,9 +123,11 @@ public class GameController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
 
-        if(m_CurrentGameState != m_PreviousGameState){
+        if (m_CurrentGameState != m_PreviousGameState)
+        {
             m_PreviousGameState = m_CurrentGameState;
             //handle game state changes here
             switch (m_CurrentGameState)
@@ -130,7 +138,7 @@ public class GameController : MonoBehaviour
                     Debug.Log("Game has started");
 
                     _SetHudState(false);
-                    _SetStartMenuState(true);
+                    _SetMainMenuState(true);
                     Time.timeScale = 0f;
 
                     break;
@@ -138,7 +146,7 @@ public class GameController : MonoBehaviour
 
                     // setup right before  playing
                     _SetHudState(true);
-                    _SetStartMenuState(false);
+                    _SetMainMenuState(false);
                     Time.timeScale = 1f;
 
                     break;
@@ -171,19 +179,22 @@ public class GameController : MonoBehaviour
             Time.timeScale = (Time.timeScale == 0f) ? 1f : 0f;
 
 
-	}
+    }
 
     private void _SetHudState(bool state)
     {
         m_Hud.gameObject.SetActive(state);
     }
 
-    private void _SetStartMenuState(bool state)
+    private void _SetMainMenuState(bool state)
     {
-        //m_StartMenu.gameObject.SetActive(state);
+        //load start menu?
+        if (m_MainMenu != null)
+            m_MainMenu.gameObject.SetActive(state);
     }
 
-    private void _CheckGameOver(){
+    private void _CheckGameOver()
+    {
         foreach (var player in m_Players)
         {
             if (player.life <= 0f)
@@ -191,8 +202,24 @@ public class GameController : MonoBehaviour
         }
     }
 
-    private void _ChangeState(GameState newState){
+    private void _ChangeState(GameState newState)
+    {
         m_PreviousGameState = m_CurrentGameState;
         m_CurrentGameState = newState;
     }
+
+    public void OnNewGame()
+    {
+        _ChangeState(GameState.Playing);
+    }
+
+    public void OnQuit()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#elif UNITY_STANDALONE
+        Application.Quit();
+#endif
+    }
+
 }
