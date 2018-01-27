@@ -62,9 +62,9 @@ MonoBehaviour:
   m_GameOverMenu: {fileID: 0}
   m_GameFinishedMenu: {fileID: 0}
   m_Hud: {fileID: 0}
-  m_Player1Prefab: {fileID: 114163443106833684, guid: 03255fe0f1fa64f19abe6c21895c9581,
+  m_Player1Prefab: {fileID: 114050683508242558, guid: c37fa1793d04d2a49ae2a651f1e629b7,
     type: 2}
-  m_Player2Prefab: {fileID: 114163443106833684, guid: 03255fe0f1fa64f19abe6c21895c9581,
+  m_Player2Prefab: {fileID: 114369226931429104, guid: ff5ee739e0fdbd8488b12e58c3363576,
     type: 2}
   m_LevelsPrefabs:
   - p1Level: {fileID: 4507126050721528, guid: 394bb7873dae94627b8f3b68b7ec9c91, type: 2}

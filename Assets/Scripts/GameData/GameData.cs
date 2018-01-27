@@ -10,6 +10,9 @@ public class Data
     [Serializable]
     public class Player
     {
+        public enum Interaction { None, Trade, Interactable, NotInteractable }
+        public Interaction currentInteractionInfo { get; set; }
+
         public float itemSpeedModifier = 0.75f; // 3/4 speed when carrying shit
         public float runSpeedModifier = 1.25f;
 

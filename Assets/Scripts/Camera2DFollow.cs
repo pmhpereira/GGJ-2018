@@ -24,6 +24,9 @@ public class Camera2DFollow : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if (target != null)
+            m_OffsetZ = (transform.position - target.position).z;
+
 		if (_repositioning == false && Math.Abs(transform.position.y - target.position.y) < yDelta)
 			return;
 

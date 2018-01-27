@@ -14,11 +14,11 @@ public class GameController : MonoBehaviour
     private static GameController s_Instance;
     public static GameController Instance { get { return s_Instance; } }
 
-    [Header("Player Maps")]
+    [Header("Player Containers")]
     [SerializeField]
-    private GameObject m_Player1Map;
+    private GameObject m_Player1Container;
     [SerializeField]
-    private GameObject m_Player2Map;
+    private GameObject m_Player2Container;
 
     [Header("Cameras")]
     [SerializeField]
@@ -131,6 +131,7 @@ public class GameController : MonoBehaviour
                 // setup right before  playing
                 //Debug.LogFormat("Player 1 life: {0}; Player 2 life: {1}", m_Players[0].life, m_Players[1].life);
                 _CheckGameOver();
+                _CheckTrade();
 
                 break;
             default:
@@ -145,6 +146,18 @@ public class GameController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.K))
             _ChangeState(GameState.Finished);
+    }
+
+    private void _CheckTrade()
+    {
+        Data.Player p1 = m_Players[0];
+        Data.Player p2 = m_Players[1];
+        if(p1.wantsSwitch && p2.wantsSwitch){
+            p2.hasItem = !p2.hasItem;
+            p1.hasItem = !p1.hasItem;
+			p1.wantsSwitch = false;
+			p2.wantsSwitch = false;
+		}
     }
 
     private void _Init()
@@ -165,13 +178,14 @@ public class GameController : MonoBehaviour
     private void _InitPlayers(float playerLife)
     {
         Data.Player p1 = new Data.Player(0, playerLife, playerSpeed);
+		p1.hasItem = true;
         m_Players[0] = p1;
         Data.Player p2 = new Data.Player(1, playerLife, playerSpeed);
         m_Players[1] = p2;
 
-        var player1gameObject = Instantiate(m_Player1Prefab, m_Player1Map.transform) as PlayerController;
+        var player1gameObject = Instantiate(m_Player1Prefab, m_Player1Container.transform) as PlayerController;
         player1gameObject.Init(p1);
-        var player2gameObject = Instantiate(m_Player2Prefab, m_Player2Map.transform) as PlayerController;
+        var player2gameObject = Instantiate(m_Player2Prefab, m_Player2Container.transform) as PlayerController;
         player2gameObject.Init(p2);
 
         m_PlayerGameObjects[0] = player1gameObject;
@@ -188,8 +202,8 @@ public class GameController : MonoBehaviour
             m_CurrentLevel.DestroyLevels();
         }
         var newLevelsPair = m_LevelsPrefabs[m_CurrentLevelIndex];
-        var p1LevelInstance = Instantiate(newLevelsPair.p1Level, m_Player1Map.transform);
-        var p2LevelInstance = Instantiate(newLevelsPair.p2Level, m_Player2Map.transform);
+        var p1LevelInstance = Instantiate(newLevelsPair.p1Level, m_Player1Container.transform);
+        var p2LevelInstance = Instantiate(newLevelsPair.p2Level, m_Player2Container.transform);
         m_CurrentLevel = new Data.LevelPair();
         m_CurrentLevel.p1Level = p1LevelInstance;
         m_CurrentLevel.p2Level = p2LevelInstance;
@@ -257,10 +271,6 @@ public class GameController : MonoBehaviour
     }
 
     public void OnResume(){
-        //if (gameState == GameState.Paused){
-        //    _ChangeState(GameState.Playing);
-        //    m_PauseMenu.gameObject.SetActive(false);
-        //}
         m_LastMenu.gameObject.SetActive(false);
         _ChangeState(GameState.Playing);
     }
@@ -268,23 +278,13 @@ public class GameController : MonoBehaviour
     public void OnGoToMainMenu(){
         _Cleanup();
         _Init();
-
-        //m_LastMenu.gameObject.SetActive(false);
         _ChangeState(GameState.Start);
-
-        //if (gameState == GameState.Paused)
-        //{
-        //    m_PauseMenu.gameObject.SetActive(false);
-        //}
-        //else if(gameState == GameState.GameOver)
-        //_ChangeState(GameState.Start);
     }
 
     public void OnRetry(){
         if(gameState == GameState.GameOver){
             _Cleanup();
             _Init();
-            //m_GameOverMenu.gameObject.SetActive((false));
             _ChangeState(GameState.Playing);
         }
     }
