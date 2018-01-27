@@ -9692,7 +9692,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.4921875}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1.28, y: 1.26}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -9736,7 +9736,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ede1ca153606f8c43975dc553229630e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 651d12418f5c463489b528fa9cdcb4f0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -21583,6 +21583,12 @@ Prefab:
       propertyPath: m_TagString
       value: Idol
       objectReference: {fileID: 0}
+    - target: {fileID: 212608773711494852, guid: b3eef9917cd4267479159b97c4146dab,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 651d12418f5c463489b528fa9cdcb4f0,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3eef9917cd4267479159b97c4146dab, type: 2}
   m_IsPrefabParent: 0
