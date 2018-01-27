@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
     private Data.Player m_Player; //get speed from here, theoretically, it returns the correct speed
     private PlatformerCharacter2D m_PlatformerCharacter;
     private Platformer2DUserControl m_UserControl;
+    private Vector3 m_LastCheckpoint;
 
     private void Awake()
     {
@@ -44,7 +45,7 @@ public class PlayerController : MonoBehaviour {
     private void _HandleInput(){
 
         //some specific input..
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.I))
             m_Player.hasItem = !m_Player.hasItem;
     }
 

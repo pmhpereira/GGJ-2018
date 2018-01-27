@@ -27,20 +27,23 @@ public class GameController : MonoBehaviour
     private Camera2DFollow m_P2Cam;
 
     [Header("PlayerSettings")]
-    public float playerSpeed = 5f;
+    public float playerSpeed = 1f;
     public float levelTime = 120f;
 
     [Header("References")]
     [SerializeField]
     private HUDController m_Hud;
     [SerializeField]
-    private PlayerController m_PlayerPrefab;
+    private PlayerController m_Player1Prefab;
+    [SerializeField]
+    private PlayerController m_Player2Prefab;
     [SerializeField]
     private Data.LevelPair[] m_LevelsPrefabs;
 
     private int m_CurrentLevelIndex = 0;
     private Data.LevelPair m_CurrentLevel;
     private Data.Player[] m_Players = new Data.Player[2]; //well, were only gonna hasve 2 :p
+    private PlayerController[] m_PlayerGameObjects = new PlayerController[2];
 
     private void Awake()
     {
@@ -77,10 +80,13 @@ public class GameController : MonoBehaviour
         Data.Player p2 = new Data.Player(1, playerLife, playerSpeed);
         m_Players[1] = p2;
 
-        var player1gameObject = Instantiate(m_PlayerPrefab, m_Player1Map.transform) as PlayerController;
+        var player1gameObject = Instantiate(m_Player1Prefab, m_Player1Map.transform) as PlayerController;
         player1gameObject.Init(p1);
-        var player2gameObject = Instantiate(m_PlayerPrefab, m_Player2Map.transform) as PlayerController;
+        var player2gameObject = Instantiate(m_Player2Prefab, m_Player2Map.transform) as PlayerController;
         player2gameObject.Init(p2);
+
+        m_PlayerGameObjects[0] = player1gameObject;
+        m_PlayerGameObjects[1] = player1gameObject;
 
         m_P1Cam.target = player1gameObject.transform;
         m_P2Cam.target = player2gameObject.transform;
@@ -107,19 +113,6 @@ public class GameController : MonoBehaviour
     private void _ResetLevel()
     {
         m_CurrentLevelIndex = 0;
-        for (int i = 0; i < m_LevelsPrefabs.Length; i++)
-        {
-            bool state = false;
-
-            if (i == m_CurrentLevelIndex)
-            {
-                state = true;
-            }
-
-            //adjust level position here
-            //m_CurrentLevel.p1Level.transform.position = Vector3.one * -10f;
-            //m_CurrentLevel.p2Level.transform.position = Vector3.one * -10f;
-        }
         LoadLevel(m_CurrentLevelIndex);
     }
 
@@ -136,13 +129,17 @@ public class GameController : MonoBehaviour
                     // on start event
                     Debug.Log("Game has started");
 
-                    //show ready message??
-                    _ChangeState(GameState.Playing);
+                    _SetHudState(false);
+                    _SetStartMenuState(true);
+                    Time.timeScale = 0f;
 
                     break;
                 case GameState.Playing:
 
                     // setup right before  playing
+                    _SetHudState(true);
+                    _SetStartMenuState(false);
+                    Time.timeScale = 1f;
 
                     break;
                 case GameState.GameOver:
@@ -163,7 +160,6 @@ public class GameController : MonoBehaviour
                 // setup right before  playing
                 Debug.LogFormat("Player 1 life: {0}; Player 2 life: {1}", m_Players[0].life, m_Players[1].life);
                 _CheckGameOver();
-                _UpdateUI();
 
                 break;
             default:
@@ -171,15 +167,20 @@ public class GameController : MonoBehaviour
         }
 
 
+        if (Input.GetKeyDown(KeyCode.P))
+            Time.timeScale = (Time.timeScale == 0f) ? 1f : 0f;
+
+
 	}
 
-    private void _SetUIState(bool state){
-        
+    private void _SetHudState(bool state)
+    {
+        m_Hud.gameObject.SetActive(state);
     }
 
-    private void _UpdateUI()
+    private void _SetStartMenuState(bool state)
     {
-        
+        //m_StartMenu.gameObject.SetActive(state);
     }
 
     private void _CheckGameOver(){
