@@ -179,35 +179,6 @@ Prefab:
       objectReference: {fileID: 2029234432}
     - target: {fileID: 114211716826467450, guid: 0ecd75c21b5de4fc68fdc5088e5c67bd,
         type: 2}
-      propertyPath: m_Hud
-      value: 
-      objectReference: {fileID: 1098145952}
-    - target: {fileID: 114211716826467450, guid: 0ecd75c21b5de4fc68fdc5088e5c67bd,
-        type: 2}
-      propertyPath: m_Player2Prefab
-      value: 
-      objectReference: {fileID: 114163443106833684, guid: 03255fe0f1fa64f19abe6c21895c9581,
-        type: 2}
-    - target: {fileID: 114211716826467450, guid: 0ecd75c21b5de4fc68fdc5088e5c67bd,
-        type: 2}
-      propertyPath: m_Player1Prefab
-      value: 
-      objectReference: {fileID: 114163443106833684, guid: 03255fe0f1fa64f19abe6c21895c9581,
-        type: 2}
-    - target: {fileID: 114211716826467450, guid: 0ecd75c21b5de4fc68fdc5088e5c67bd,
-        type: 2}
-      propertyPath: m_LevelsPrefabs.Array.data[0].p1Level
-      value: 
-      objectReference: {fileID: 4507126050721528, guid: 394bb7873dae94627b8f3b68b7ec9c91,
-        type: 2}
-    - target: {fileID: 114211716826467450, guid: 0ecd75c21b5de4fc68fdc5088e5c67bd,
-        type: 2}
-      propertyPath: m_LevelsPrefabs.Array.data[0].p2Level
-      value: 
-      objectReference: {fileID: 4250519727049572, guid: f130e472e4b0f476b9b4afec6db1a13a,
-        type: 2}
-    - target: {fileID: 114211716826467450, guid: 0ecd75c21b5de4fc68fdc5088e5c67bd,
-        type: 2}
       propertyPath: m_PauseMenu
       value: 
       objectReference: {fileID: 803957825}
@@ -221,6 +192,11 @@ Prefab:
       propertyPath: m_GameFinishedMenu
       value: 
       objectReference: {fileID: 1243705138}
+    - target: {fileID: 114211716826467450, guid: 0ecd75c21b5de4fc68fdc5088e5c67bd,
+        type: 2}
+      propertyPath: m_Hud
+      value: 
+      objectReference: {fileID: 1098145952}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ecd75c21b5de4fc68fdc5088e5c67bd, type: 2}
   m_IsPrefabParent: 0
