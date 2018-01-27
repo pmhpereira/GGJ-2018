@@ -8,7 +8,8 @@ public class PlayMusic : MonoBehaviour {
 
     public MenuSettings menuSettings;
 	public AudioClip titleMusic;					//Assign Audioclip for title music loop
-	public AudioClip mainMusic;						//Assign Audioclip for main 
+	public AudioClip mainMusic;						//Assign Audioclip for main
+    public AudioClip start;
 	public AudioMixerSnapshot volumeDown;			//Reference to Audio mixer snapshot in which the master volume of main mixer is turned down
 	public AudioMixerSnapshot volumeUp;				//Reference to Audio mixer snapshot in which the master volume of main mixer is turned up
 
@@ -71,4 +72,11 @@ public class PlayMusic : MonoBehaviour {
 		//call the TransitionTo function of the audioMixerSnapshot volumeDown;
 		volumeDown.TransitionTo (fadeTime);
 	}
+
+    public void PlayStart(AudioClip start)
+    {
+        Debug.Log("sjcoasjoajsda");
+        musicSource.clip = start;
+        musicSource.Play();
+    }
 }

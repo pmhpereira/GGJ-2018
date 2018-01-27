@@ -34,7 +34,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1168181352482800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 95.98157, y: 1033.3466, z: 13.616282}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -58,7 +58,9 @@ MonoBehaviour:
   playerSpeed: 5
   levelTime: 120
   m_Hud: {fileID: 0}
-  m_PlayerPrefab: {fileID: 114163443106833684, guid: 03255fe0f1fa64f19abe6c21895c9581,
+  m_Player1Prefab: {fileID: 114163443106833684, guid: 03255fe0f1fa64f19abe6c21895c9581,
+    type: 2}
+  m_Player2Prefab: {fileID: 114163443106833684, guid: 03255fe0f1fa64f19abe6c21895c9581,
     type: 2}
   m_LevelsPrefabs:
   - p1Level: {fileID: 4299867739299614, guid: fcd38381bd9004452b72101e2ee38eff, type: 2}

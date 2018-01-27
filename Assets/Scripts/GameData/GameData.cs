@@ -47,7 +47,8 @@ public class Data
     }
 
     [Serializable]
-    public class LevelPair{
+    public class LevelPair
+    {
         public Transform p1Level;
         public Transform p2Level;
 

@@ -14,6 +14,7 @@ public class StartOptions : MonoBehaviour {
 	public bool changeMusicOnStart;										//Choose whether to continue playing menu music or start a new music clip
     public CanvasGroup fadeOutImageCanvasGroup;                         //Canvas group used to fade alpha of image which fades in before changing scenes
     public Image fadeImage;                                             //Reference to image used to fade out before changing scenes
+    public AudioClip start;
 
 	[HideInInspector] public bool inMainMenu = true;					//If true, pause button disabled in main menu (Cancel in input manager, default escape key)
 	[HideInInspector] public AnimationClip fadeAlphaAnimationClip;		//Animation clip fading out UI elements alpha
@@ -52,8 +53,8 @@ public class StartOptions : MonoBehaviour {
 		//If changeScenes is true, start fading and change scenes halfway through animation when screen is blocked by FadeImage
 		if (menuSettingsData.nextSceneIndex != 0) 
 		{
-			//Use invoke to delay calling of LoadDelayed by half the length of fadeColorAnimationClip
-			Invoke ("LoadDelayed", menuSettingsData.menuFadeTime);
+            //Use invoke to delay calling of LoadDelayed by half the length of fadeColorAnimationClip
+            Invoke ("LoadDelayed", menuSettingsData.menuFadeTime);
 
             StartCoroutine(FadeCanvasGroupAlpha(0f, 1f, fadeOutImageCanvasGroup));
 
@@ -118,7 +119,8 @@ public class StartOptions : MonoBehaviour {
 			//Wait until game has started, then play new music
 			Invoke ("PlayNewMusic", menuSettingsData.menuFadeTime);
 		}
-        
+
+        playMusic.PlayStart(start);
         StartCoroutine(FadeCanvasGroupAlpha(1f,0f, menuCanvasGroup));
 	}
 
