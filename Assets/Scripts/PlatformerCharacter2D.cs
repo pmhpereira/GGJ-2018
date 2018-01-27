@@ -52,9 +52,6 @@ public class PlatformerCharacter2D : MonoBehaviour
 		canGround = true;
 		m_Grounded = m_Grounded && !m_Climbing;
 		m_Anim.SetBool("Ground", m_Grounded);
-
-		// Set the vertical animation
-		m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
 	}
 
 	public void Move(float hMove, float vMove, bool crouch, bool jump, bool climb)
@@ -83,7 +80,9 @@ public class PlatformerCharacter2D : MonoBehaviour
 				m_Grounded = true;
 				m_Climbing = false;
 				m_Rigidbody2D.isKinematic = false;
-				m_Anim.SetBool("Ground", m_Grounded);
+				m_Anim.SetBool("Ground", true);
+				m_Anim.SetBool("Climbing", false);
+				m_Anim.SetFloat("vSpeed", 0);
 			}
 			else if (m_Grounded && !m_Climbing && canClimb)
 			{
@@ -92,6 +91,9 @@ public class PlatformerCharacter2D : MonoBehaviour
 				m_Rigidbody2D.isKinematic = true;
 
 				m_Rigidbody2D.velocity = Vector2.zero;
+				m_Anim.SetBool("Ground", false);
+				m_Anim.SetBool("Climbing", true);
+				m_Anim.SetFloat("vSpeed", (int) Mathf.Abs(vMove));
 
 				if (vMove == 0)
 					return;
@@ -102,6 +104,9 @@ public class PlatformerCharacter2D : MonoBehaviour
 			else if (m_Climbing)
 			{
 				m_Rigidbody2D.velocity = Vector2.zero;
+				m_Anim.SetBool("Ground", false);
+				m_Anim.SetBool("Climbing", true);
+				m_Anim.SetFloat("vSpeed", (int) Mathf.Abs(vMove));
 					
 				if (vMove == 0)
 					return;
@@ -114,7 +119,9 @@ public class PlatformerCharacter2D : MonoBehaviour
 				m_Grounded = true;
 				m_Climbing = false;
 				m_Rigidbody2D.isKinematic = false;
-				m_Anim.SetBool("Ground", m_Grounded);
+				m_Anim.SetBool("Ground", true);
+				m_Anim.SetBool("Climbing", false);
+				m_Anim.SetFloat("vSpeed", 0);
 			}
 		}
 

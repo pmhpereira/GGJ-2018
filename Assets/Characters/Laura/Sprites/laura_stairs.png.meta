@@ -1,44 +1,44 @@
 fileFormatVersion: 2
-guid: 438975909c524f746ae0ccc1125b7dc5
-timeCreated: 1517089026
+guid: 8594ccb79a457d24da9d4de799952447
+timeCreated: 1517089043
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: laura walk_0
-    21300002: laura walk_1
-    21300004: laura walk_2
-    21300006: laura walk_3
-    21300008: laura walk_4
-    21300010: laura walk_5
-    21300012: laura walk_6
-    21300014: laura walk_7
-    21300016: laura walk_8
-    21300018: laura walk_9
-    21300020: laura walk_10
-    21300022: laura walk_11
-    21300024: laura walk_12
-    21300026: laura walk_13
-    21300028: laura walk_14
-    21300030: laura walk_15
-    21300032: laura walk_16
-    21300034: laura walk_17
-    21300036: laura walk_18
-    21300038: laura walk_19
-    21300040: laura walk_20
-    21300042: laura walk_21
-    21300044: laura walk_22
-    21300046: laura walk_23
-    21300048: laura walk_24
-    21300050: laura walk_25
-    21300052: laura walk_26
-    21300054: laura walk_27
-    21300056: laura walk_28
-    21300058: laura walk_29
-    21300060: laura walk_30
-    21300062: laura walk_31
-    21300064: laura walk_32
-    21300066: laura walk_33
-    21300068: laura walk_34
+    21300000: laura_stairs_0
+    21300002: laura_stairs_1
+    21300004: laura_stairs_2
+    21300006: laura_stairs_3
+    21300008: laura_stairs_4
+    21300010: laura_stairs_5
+    21300012: laura_stairs_6
+    21300014: laura_stairs_7
+    21300016: laura_stairs_8
+    21300018: laura_stairs_9
+    21300020: laura_stairs_10
+    21300022: laura_stairs_11
+    21300024: laura_stairs_12
+    21300026: laura_stairs_13
+    21300028: laura_stairs_14
+    21300030: laura_stairs_15
+    21300032: laura_stairs_16
+    21300034: laura_stairs_17
+    21300036: laura_stairs_18
+    21300038: laura_stairs_19
+    21300040: laura_stairs_20
+    21300042: laura_stairs_21
+    21300044: laura_stairs_22
+    21300046: laura_stairs_23
+    21300048: laura_stairs_24
+    21300050: laura_stairs_25
+    21300052: laura_stairs_26
+    21300054: laura_stairs_27
+    21300056: laura_stairs_28
+    21300058: laura_stairs_29
+    21300060: laura_stairs_30
+    21300062: laura_stairs_31
+    21300064: laura_stairs_32
+    21300066: laura_stairs_33
+    21300068: laura_stairs_34
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -125,491 +125,491 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: laura walk_0
+      name: laura_stairs_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1638
-        width: 192
-        height: 273
+        y: 1674
+        width: 165
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura walk_1
+      name: laura_stairs_1
       rect:
         serializedVersion: 2
-        x: 192
-        y: 1638
-        width: 192
-        height: 273
+        x: 165
+        y: 1674
+        width: 165
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura walk_2
+      name: laura_stairs_2
       rect:
         serializedVersion: 2
-        x: 384
-        y: 1638
-        width: 192
-        height: 273
+        x: 330
+        y: 1674
+        width: 165
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura walk_3
+      name: laura_stairs_3
       rect:
         serializedVersion: 2
-        x: 576
-        y: 1638
-        width: 192
-        height: 273
+        x: 495
+        y: 1674
+        width: 165
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura walk_4
+      name: laura_stairs_4
       rect:
         serializedVersion: 2
-        x: 768
-        y: 1638
-        width: 192
-        height: 273
+        x: 660
+        y: 1674
+        width: 165
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura walk_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1365
-        width: 192
-        height: 273
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: laura walk_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 1365
-        width: 192
-        height: 273
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: laura walk_7
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 1365
-        width: 192
-        height: 273
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: laura walk_8
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 1365
-        width: 192
-        height: 273
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: laura walk_9
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 1365
-        width: 192
-        height: 273
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: laura walk_10
+      name: laura_stairs_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 1092
-        width: 192
-        height: 273
+        y: 1395
+        width: 165
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura walk_11
+      name: laura_stairs_6
       rect:
         serializedVersion: 2
-        x: 192
-        y: 1092
-        width: 192
-        height: 273
+        x: 165
+        y: 1395
+        width: 165
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura walk_12
+      name: laura_stairs_7
       rect:
         serializedVersion: 2
-        x: 384
-        y: 1092
-        width: 192
-        height: 273
+        x: 330
+        y: 1395
+        width: 165
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura walk_13
+      name: laura_stairs_8
       rect:
         serializedVersion: 2
-        x: 576
-        y: 1092
-        width: 192
-        height: 273
+        x: 495
+        y: 1395
+        width: 165
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura walk_14
+      name: laura_stairs_9
       rect:
         serializedVersion: 2
-        x: 768
-        y: 1092
-        width: 192
-        height: 273
+        x: 660
+        y: 1395
+        width: 165
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura walk_15
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 819
-        width: 192
-        height: 273
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: laura walk_16
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 819
-        width: 192
-        height: 273
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: laura walk_17
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 819
-        width: 192
-        height: 273
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: laura walk_18
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 819
-        width: 192
-        height: 273
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: laura walk_19
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 819
-        width: 192
-        height: 273
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: laura walk_20
+      name: laura_stairs_10
       rect:
         serializedVersion: 2
         x: 0
-        y: 546
-        width: 192
-        height: 273
+        y: 1116
+        width: 165
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura walk_21
+      name: laura_stairs_11
       rect:
         serializedVersion: 2
-        x: 192
-        y: 546
-        width: 192
-        height: 273
+        x: 165
+        y: 1116
+        width: 165
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura walk_22
+      name: laura_stairs_12
       rect:
         serializedVersion: 2
-        x: 384
-        y: 546
-        width: 192
-        height: 273
+        x: 330
+        y: 1116
+        width: 165
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura walk_23
+      name: laura_stairs_13
       rect:
         serializedVersion: 2
-        x: 576
-        y: 546
-        width: 192
-        height: 273
+        x: 495
+        y: 1116
+        width: 165
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura walk_24
+      name: laura_stairs_14
       rect:
         serializedVersion: 2
-        x: 768
-        y: 546
-        width: 192
-        height: 273
+        x: 660
+        y: 1116
+        width: 165
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura walk_25
+      name: laura_stairs_15
       rect:
         serializedVersion: 2
         x: 0
-        y: 273
-        width: 192
-        height: 273
+        y: 837
+        width: 165
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura walk_26
+      name: laura_stairs_16
       rect:
         serializedVersion: 2
-        x: 192
-        y: 273
-        width: 192
-        height: 273
+        x: 165
+        y: 837
+        width: 165
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura walk_27
+      name: laura_stairs_17
       rect:
         serializedVersion: 2
-        x: 384
-        y: 273
-        width: 192
-        height: 273
+        x: 330
+        y: 837
+        width: 165
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura walk_28
+      name: laura_stairs_18
       rect:
         serializedVersion: 2
-        x: 576
-        y: 273
-        width: 192
-        height: 273
+        x: 495
+        y: 837
+        width: 165
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura walk_29
+      name: laura_stairs_19
       rect:
         serializedVersion: 2
-        x: 768
-        y: 273
-        width: 192
-        height: 273
+        x: 660
+        y: 837
+        width: 165
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura walk_30
+      name: laura_stairs_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 558
+        width: 165
+        height: 279
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_stairs_21
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 558
+        width: 165
+        height: 279
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_stairs_22
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 558
+        width: 165
+        height: 279
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_stairs_23
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 558
+        width: 165
+        height: 279
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_stairs_24
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 558
+        width: 165
+        height: 279
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_stairs_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 279
+        width: 165
+        height: 279
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_stairs_26
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 279
+        width: 165
+        height: 279
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_stairs_27
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 279
+        width: 165
+        height: 279
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_stairs_28
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 279
+        width: 165
+        height: 279
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_stairs_29
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 279
+        width: 165
+        height: 279
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_stairs_30
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 192
-        height: 273
+        width: 165
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura walk_31
+      name: laura_stairs_31
       rect:
         serializedVersion: 2
-        x: 192
+        x: 165
         y: 0
-        width: 192
-        height: 273
+        width: 165
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura walk_32
+      name: laura_stairs_32
       rect:
         serializedVersion: 2
-        x: 384
+        x: 330
         y: 0
-        width: 192
-        height: 273
+        width: 165
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura walk_33
+      name: laura_stairs_33
       rect:
         serializedVersion: 2
-        x: 576
+        x: 495
         y: 0
-        width: 192
-        height: 273
+        width: 165
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura walk_34
+      name: laura_stairs_34
       rect:
         serializedVersion: 2
-        x: 768
+        x: 660
         y: 0
-        width: 192
-        height: 273
+        width: 165
+        height: 279
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
