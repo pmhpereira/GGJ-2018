@@ -13,6 +13,7 @@ public class Data
         public float itemSpeedModifier = 0.75f; // 3/4 speed when carrying shit
         public float runSpeedModifier = 1.25f;
 
+        public bool reachedEnd { get; set; }
         public bool wantsSwitch { get { return m_WantsSwitch; } set { m_WantsSwitch = value; }}
         public bool hasItem { get { return m_HasItem; } set { m_HasItem = value; } }
         public bool isRunning { get { return m_IsRunning; } set { m_IsRunning = value; } }

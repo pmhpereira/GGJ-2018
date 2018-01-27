@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PauseMenu : MonoBehaviour
+public class GameOverMenu : MonoBehaviour
 {
 
     public Transform m_OptionsContainer;
