@@ -69,6 +69,9 @@ public class PlayerController : MonoBehaviour
                 m_Player.life -= Time.deltaTime;
 
 
+            if (m_PlatformerCharacter != null)
+                m_PlatformerCharacter.maxRunningSpeed = m_Player.speed;
+
             //updating interaction info
             if (m_Player.wantsSwitch)
             {
@@ -80,11 +83,9 @@ public class PlayerController : MonoBehaviour
             }
             else
                 m_Player.currentInteractionInfo = Data.Player.Interaction.None;
-                
+
         }
 
-        if(m_PlatformerCharacter != null)
-		    m_PlatformerCharacter.maxRunningSpeed = m_Player.speed;
 	}
 
 	private void _HandleInput()
@@ -96,8 +97,11 @@ public class PlayerController : MonoBehaviour
 		}
 
 		//some specific input..
-		if (Input.GetKeyDown(KeyCode.I))
-			m_Player.hasItem = !m_Player.hasItem;
+		//if (Input.GetKeyDown(KeyCode.I))
+			//m_Player.hasItem = !m_Player.hasItem;
+
+        if (Input.GetKeyDown(string.Format("P{0}_Switch", m_Player.playerIndex)) && m_Player.hasItem)
+            m_Player.wantsSwitch = !m_Player.wantsSwitch;
 	}
 
 	private void OnTriggerEnter2D(Collider2D collider)
