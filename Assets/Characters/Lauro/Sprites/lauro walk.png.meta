@@ -1,44 +1,44 @@
 fileFormatVersion: 2
-guid: c15d8bcbbbef5764a8ba67aae9a4a21b
-timeCreated: 1517054785
+guid: 2a08493700c89ea40957c6bf3c03f717
+timeCreated: 1517058952
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: laura_walk_0
-    21300002: laura_walk_1
-    21300004: laura_walk_2
-    21300006: laura_walk_3
-    21300008: laura_walk_4
-    21300010: laura_walk_5
-    21300012: laura_walk_6
-    21300014: laura_walk_7
-    21300016: laura_walk_8
-    21300018: laura_walk_9
-    21300020: laura_walk_10
-    21300022: laura_walk_11
-    21300024: laura_walk_12
-    21300026: laura_walk_13
-    21300028: laura_walk_14
-    21300030: laura_walk_15
-    21300032: laura_walk_16
-    21300034: laura_walk_17
-    21300036: laura_walk_18
-    21300038: laura_walk_19
-    21300040: laura_walk_20
-    21300042: laura_walk_21
-    21300044: laura_walk_22
-    21300046: laura_walk_23
-    21300048: laura_walk_24
-    21300050: laura_walk_25
-    21300052: laura_walk_26
-    21300054: laura_walk_27
-    21300056: laura_walk_28
-    21300058: laura_walk_29
-    21300060: laura_walk_30
-    21300062: laura_walk_31
-    21300064: laura_walk_32
-    21300066: laura_walk_33
-    21300068: laura_walk_34
+    21300000: lauro walk_0
+    21300002: lauro walk_1
+    21300004: lauro walk_2
+    21300006: lauro walk_3
+    21300008: lauro walk_4
+    21300010: lauro walk_5
+    21300012: lauro walk_6
+    21300014: lauro walk_7
+    21300016: lauro walk_8
+    21300018: lauro walk_9
+    21300020: lauro walk_10
+    21300022: lauro walk_11
+    21300024: lauro walk_12
+    21300026: lauro walk_13
+    21300028: lauro walk_14
+    21300030: lauro walk_15
+    21300032: lauro walk_16
+    21300034: lauro walk_17
+    21300036: lauro walk_18
+    21300038: lauro walk_19
+    21300040: lauro walk_20
+    21300042: lauro walk_21
+    21300044: lauro walk_22
+    21300046: lauro walk_23
+    21300048: lauro walk_24
+    21300050: lauro walk_25
+    21300052: lauro walk_26
+    21300054: lauro walk_27
+    21300056: lauro walk_28
+    21300058: lauro walk_29
+    21300060: lauro walk_30
+    21300062: lauro walk_31
+    21300064: lauro walk_32
+    21300066: lauro walk_33
+    21300068: lauro walk_34
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -125,491 +125,491 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: laura_walk_0
+      name: lauro walk_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1638
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        y: 1554
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura_walk_1
+      name: lauro walk_1
       rect:
         serializedVersion: 2
-        x: 192
-        y: 1638
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 173
+        y: 1554
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura_walk_2
+      name: lauro walk_2
       rect:
         serializedVersion: 2
-        x: 384
-        y: 1638
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 346
+        y: 1554
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura_walk_3
+      name: lauro walk_3
       rect:
         serializedVersion: 2
-        x: 576
-        y: 1638
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 519
+        y: 1554
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura_walk_4
+      name: lauro walk_4
       rect:
         serializedVersion: 2
-        x: 768
-        y: 1638
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 692
+        y: 1554
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura_walk_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1365
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: laura_walk_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 1365
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: laura_walk_7
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 1365
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: laura_walk_8
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 1365
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: laura_walk_9
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 1365
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: laura_walk_10
+      name: lauro walk_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 1092
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        y: 1295
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura_walk_11
+      name: lauro walk_6
       rect:
         serializedVersion: 2
-        x: 192
-        y: 1092
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 173
+        y: 1295
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura_walk_12
+      name: lauro walk_7
       rect:
         serializedVersion: 2
-        x: 384
-        y: 1092
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 346
+        y: 1295
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura_walk_13
+      name: lauro walk_8
       rect:
         serializedVersion: 2
-        x: 576
-        y: 1092
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 519
+        y: 1295
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura_walk_14
+      name: lauro walk_9
       rect:
         serializedVersion: 2
-        x: 768
-        y: 1092
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 692
+        y: 1295
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura_walk_15
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 819
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: laura_walk_16
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 819
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: laura_walk_17
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 819
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: laura_walk_18
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 819
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: laura_walk_19
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 819
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: laura_walk_20
+      name: lauro walk_10
       rect:
         serializedVersion: 2
         x: 0
-        y: 546
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        y: 1036
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura_walk_21
+      name: lauro walk_11
       rect:
         serializedVersion: 2
-        x: 192
-        y: 546
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 173
+        y: 1036
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura_walk_22
+      name: lauro walk_12
       rect:
         serializedVersion: 2
-        x: 384
-        y: 546
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 346
+        y: 1036
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura_walk_23
+      name: lauro walk_13
       rect:
         serializedVersion: 2
-        x: 576
-        y: 546
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 519
+        y: 1036
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura_walk_24
+      name: lauro walk_14
       rect:
         serializedVersion: 2
-        x: 768
-        y: 546
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 692
+        y: 1036
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura_walk_25
+      name: lauro walk_15
       rect:
         serializedVersion: 2
         x: 0
-        y: 273
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        y: 777
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura_walk_26
+      name: lauro walk_16
       rect:
         serializedVersion: 2
-        x: 192
-        y: 273
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 173
+        y: 777
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura_walk_27
+      name: lauro walk_17
       rect:
         serializedVersion: 2
-        x: 384
-        y: 273
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 346
+        y: 777
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura_walk_28
+      name: lauro walk_18
       rect:
         serializedVersion: 2
-        x: 576
-        y: 273
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 519
+        y: 777
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura_walk_29
+      name: lauro walk_19
       rect:
         serializedVersion: 2
-        x: 768
-        y: 273
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 692
+        y: 777
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura_walk_30
+      name: lauro walk_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 518
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro walk_21
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 518
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro walk_22
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 518
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro walk_23
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 518
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro walk_24
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 518
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro walk_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 259
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro walk_26
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 259
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro walk_27
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 259
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro walk_28
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 259
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro walk_29
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 259
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro walk_30
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura_walk_31
+      name: lauro walk_31
       rect:
         serializedVersion: 2
-        x: 192
+        x: 173
         y: 0
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura_walk_32
+      name: lauro walk_32
       rect:
         serializedVersion: 2
-        x: 384
+        x: 346
         y: 0
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura_walk_33
+      name: lauro walk_33
       rect:
         serializedVersion: 2
-        x: 576
+        x: 519
         y: 0
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: laura_walk_34
+      name: lauro walk_34
       rect:
         serializedVersion: 2
-        x: 768
+        x: 692
         y: 0
-        width: 192
-        height: 273
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 173
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

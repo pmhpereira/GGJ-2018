@@ -34,7 +34,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1168181352482800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 95.98157, y: 1033.3466, z: 13.616282}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -51,8 +51,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: effd2aee553904c10b38ca116fa7d2e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Player1Map: {fileID: 0}
+  m_Player2Map: {fileID: 0}
+  m_P1Cam: {fileID: 0}
+  m_P2Cam: {fileID: 0}
   playerSpeed: 5
   levelTime: 120
   m_Hud: {fileID: 0}
-  m_PlayerPrefab: {fileID: 114163443106833684, guid: 03255fe0f1fa64f19abe6c21895c9581,
+  m_Player1Prefab: {fileID: 114163443106833684, guid: 03255fe0f1fa64f19abe6c21895c9581,
     type: 2}
+  m_Player2Prefab: {fileID: 114163443106833684, guid: 03255fe0f1fa64f19abe6c21895c9581,
+    type: 2}
+  m_LevelsPrefabs:
+  - p1Level: {fileID: 4299867739299614, guid: fcd38381bd9004452b72101e2ee38eff, type: 2}
+    p2Level: {fileID: 4903816230917394, guid: 22327fd991b5c43e8adeb3f574445ecc, type: 2}
