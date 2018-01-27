@@ -11,6 +11,7 @@ TagManager:
   - Pressure
   - Stair
   - Idol
+  - Elevator
   layers:
   - Default
   - TransparentFX
