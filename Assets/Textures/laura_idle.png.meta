@@ -1,9 +1,63 @@
 fileFormatVersion: 2
 guid: 4b3b1a41e43f4444882d9bd41aed225e
-timeCreated: 1517052996
+timeCreated: 1517054761
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: laura_idle_0
+    21300002: laura_idle_1
+    21300004: laura_idle_2
+    21300006: laura_idle_3
+    21300008: laura_idle_4
+    21300010: laura_idle_5
+    21300012: laura_idle_6
+    21300014: laura_idle_7
+    21300016: laura_idle_8
+    21300018: laura_idle_9
+    21300020: laura_idle_10
+    21300022: laura_idle_11
+    21300024: laura_idle_12
+    21300026: laura_idle_13
+    21300028: laura_idle_14
+    21300030: laura_idle_15
+    21300032: laura_idle_16
+    21300034: laura_idle_17
+    21300036: laura_idle_18
+    21300038: laura_idle_19
+    21300040: laura_idle_20
+    21300042: laura_idle_21
+    21300044: laura_idle_22
+    21300046: laura_idle_23
+    21300048: laura_idle_24
+    21300050: laura_idle_25
+    21300052: laura_idle_26
+    21300054: laura_idle_27
+    21300056: laura_idle_28
+    21300058: laura_idle_29
+    21300060: laura_idle_30
+    21300062: laura_idle_31
+    21300064: laura_idle_32
+    21300066: laura_idle_33
+    21300068: laura_idle_34
+    21300070: laura_idle_35
+    21300072: laura_idle_36
+    21300074: laura_idle_37
+    21300076: laura_idle_38
+    21300078: laura_idle_39
+    21300080: laura_idle_40
+    21300082: laura_idle_41
+    21300084: laura_idle_42
+    21300086: laura_idle_43
+    21300088: laura_idle_44
+    21300090: laura_idle_45
+    21300092: laura_idle_46
+    21300094: laura_idle_47
+    21300096: laura_idle_48
+    21300098: laura_idle_49
+    21300100: laura_idle_50
+    21300102: laura_idle_51
+    21300104: laura_idle_52
+    21300106: laura_idle_53
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -40,13 +94,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -66,9 +120,785 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: laura_idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2120
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2120
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_2
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 2120
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_3
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 2120
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_4
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 2120
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_5
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 2120
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1855
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1855
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1855
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1855
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_10
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1855
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_11
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1855
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1590
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_13
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1590
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_14
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1590
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_15
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1590
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_16
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1590
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_17
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1590
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1325
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1325
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_20
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1325
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_21
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1325
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_22
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1325
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_23
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1325
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1060
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_25
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1060
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_26
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1060
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_27
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1060
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_28
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1060
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_29
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1060
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 795
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_31
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 795
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_32
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 795
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_33
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 795
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_34
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 795
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_35
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 795
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 530
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_37
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 530
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_38
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 530
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_39
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 530
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_40
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 530
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_41
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 530
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 265
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_43
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 265
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_44
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 265
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_45
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 265
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_46
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 265
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_47
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 265
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_49
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_50
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_51
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_52
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: laura_idle_53
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 192
+        height: 265
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
