@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
 		//if (Input.GetKeyDown(KeyCode.I))
 			//m_Player.hasItem = !m_Player.hasItem;
 
-        if (Input.GetKeyDown(string.Format("P{0}_Switch", m_Player.playerIndex)) && m_Player.hasItem)
+        if (Input.GetButtonDown(string.Format("P{0}_Switch", m_Player.playerIndex+1)))
             m_Player.wantsSwitch = !m_Player.wantsSwitch;
 	}
 
