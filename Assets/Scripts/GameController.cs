@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,6 +17,9 @@ public class GameController : MonoBehaviour {
     public float levelTime = 120f;
 
     [SerializeField]
+    private HUDController m_Hud;
+
+    [SerializeField]
     private PlayerController m_PlayerPrefab;
 
     private Data.Player[] m_Players = new Data.Player[2]; //well, were only gonna hasve 2 :p
@@ -28,9 +32,11 @@ public class GameController : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        Data.Player p1 = new Data.Player(0, levelTime / 2f, playerSpeed);
+        float playerLife = levelTime / 2f;
+
+        Data.Player p1 = new Data.Player(0, playerLife, playerSpeed);
         m_Players[0] = p1;
-        Data.Player p2 = new Data.Player(1, levelTime / 2f, playerSpeed);
+        Data.Player p2 = new Data.Player(1, playerLife, playerSpeed);
         m_Players[1] = p2;
 
         //instantiate first level?
@@ -39,6 +45,9 @@ public class GameController : MonoBehaviour {
         player1gameObject.Init(p1);
         var player2gameObject = Instantiate(m_PlayerPrefab) as PlayerController;
         player2gameObject.Init(p2);
+
+        //load hud
+        m_Hud.Init(playerLife, m_Players);
 
         //load menu?
 
@@ -88,6 +97,7 @@ public class GameController : MonoBehaviour {
                 // setup right before  playing
                 Debug.LogFormat("Player 1 life: {0}; Player 2 life: {1}", m_Players[0].life, m_Players[1].life);
                 _CheckGameOver();
+                _UpdateUI();
 
                 break;
             default:
@@ -96,6 +106,15 @@ public class GameController : MonoBehaviour {
 
 
 	}
+
+    private void _SetUIState(bool state){
+        
+    }
+
+    private void _UpdateUI()
+    {
+        
+    }
 
     private void _CheckGameOver(){
         foreach (var player in m_Players)
