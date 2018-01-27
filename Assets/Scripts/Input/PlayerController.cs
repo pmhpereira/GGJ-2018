@@ -17,8 +17,8 @@ public class PlayerController : MonoBehaviour {
 
     public void Init(Data.Player player){
         m_Player = player;
-        m_UserControl.HorizontalBind = string.Format("P{0}_Horizontal", m_Player.playerIndex);
-        m_UserControl.JumpBind = string.Format("P{0}_Jump", m_Player.playerIndex);
+        m_UserControl.HorizontalBind = string.Format("P{0}_Horizontal", m_Player.playerIndex + 1);
+        m_UserControl.JumpBind = string.Format("P{0}_Jump", m_Player.playerIndex + 1);
     }
 
 	// Use this for initialization
@@ -44,7 +44,8 @@ public class PlayerController : MonoBehaviour {
     private void _HandleInput(){
 
         //some specific input..
-
+        if (Input.GetKeyDown(KeyCode.Space))
+            m_Player.hasItem = !m_Player.hasItem;
     }
 
 }

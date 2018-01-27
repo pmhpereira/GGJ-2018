@@ -12,6 +12,9 @@ TagManager:
   - Stair
   - Idol
   - Elevator
+  - PlayerPosition
+  - PlayerArrow
+  - PlayerHUD
   layers:
   - Default
   - TransparentFX
