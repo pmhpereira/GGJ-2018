@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour {
     private void _UpdatePlayer(){
         if (m_Player.hasItem)
             m_Player.life -= Time.deltaTime;
-        m_PlatformerCharacter.maxSpeed = m_Player.speed;
+        m_PlatformerCharacter.maxRunningSpeed = m_Player.speed;
     }
 
     private void _HandleInput(){
