@@ -131,6 +131,7 @@ public class GameController : MonoBehaviour
                 // setup right before  playing
                 //Debug.LogFormat("Player 1 life: {0}; Player 2 life: {1}", m_Players[0].life, m_Players[1].life);
                 _CheckGameOver();
+                _CheckTrade();
 
                 break;
             default:
@@ -145,6 +146,16 @@ public class GameController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.K))
             _ChangeState(GameState.Finished);
+    }
+
+    private void _CheckTrade()
+    {
+        Data.Player p1 = m_Players[0];
+        Data.Player p2 = m_Players[1];
+        if(p1.wantsSwitch && p2.wantsSwitch){
+            p2.hasItem = !p2.hasItem;
+            p1.hasItem = !p1.hasItem;
+        }
     }
 
     private void _Init()
@@ -257,10 +268,6 @@ public class GameController : MonoBehaviour
     }
 
     public void OnResume(){
-        //if (gameState == GameState.Paused){
-        //    _ChangeState(GameState.Playing);
-        //    m_PauseMenu.gameObject.SetActive(false);
-        //}
         m_LastMenu.gameObject.SetActive(false);
         _ChangeState(GameState.Playing);
     }
@@ -268,23 +275,13 @@ public class GameController : MonoBehaviour
     public void OnGoToMainMenu(){
         _Cleanup();
         _Init();
-
-        //m_LastMenu.gameObject.SetActive(false);
         _ChangeState(GameState.Start);
-
-        //if (gameState == GameState.Paused)
-        //{
-        //    m_PauseMenu.gameObject.SetActive(false);
-        //}
-        //else if(gameState == GameState.GameOver)
-        //_ChangeState(GameState.Start);
     }
 
     public void OnRetry(){
         if(gameState == GameState.GameOver){
             _Cleanup();
             _Init();
-            //m_GameOverMenu.gameObject.SetActive((false));
             _ChangeState(GameState.Playing);
         }
     }
