@@ -23,22 +23,21 @@ public class MainMenu : MonoBehaviour {
     float currentDelay = 0f;
 	
 	// Update is called once per frame
-	void Update () {
-        if (GameController.Instance.gameState == GameController.GameState.Start)
+	void Update ()
+	{
+		if (GameController.Instance.gameState == GameController.GameState.Start)
         {
             if (currentDelay <= 0f) //read input
             {
-                if (Input.GetAxis("P1_Vertical") > 0.1f || Input.GetAxis("Vertical") > 0.1f)
-                {
+                if (Input.GetAxis("P1_Vertical") > 0f || Input.GetAxis("Vertical") > 0f)
                     print("UP");
-                }
-                if (Input.GetAxis("P1_Vertical") < -0.1f || Input.GetAxis("Vertical") < -0.1f)
-                {
-                    print("DOWN");
-                }
 
-                if( Input.GetButton("P1_Jump") || Input.GetMouseButtonDown(0)){
-                    
+				if (Input.GetAxis("P1_Vertical") < 0f || Input.GetAxis("Vertical") < 0f)
+                    print("DOWN");
+
+                if( Input.GetButton("P1_Jump") || Input.GetMouseButtonDown(0))
+				{
+					print("SELECT");
                 }
 
                 currentDelay = delay;

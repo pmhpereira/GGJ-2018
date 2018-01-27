@@ -38,7 +38,8 @@ public class Platformer2DUserControl : MonoBehaviour
 			m_Climb = false;
 
 		// Pass all parameters to the character control script.
-		m_Character.Move(h, v, crouch, m_Jump, m_Climb);
+		if(m_Character != null)
+			m_Character.Move(h, v, crouch, m_Jump, m_Climb);
 		m_Jump = false;
 		m_Climb = false;
 	}

@@ -14,8 +14,9 @@ public class Camera2DFollow : MonoBehaviour
 
     // Use this for initialization
     private void Start()
-    {
-        m_OffsetZ = (transform.position - target.position).z;
+	{ 
+		if(target != null)
+	        m_OffsetZ = (transform.position - target.position).z;
     }
 
 	private bool _repositioning = false;
