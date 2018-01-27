@@ -30,9 +30,16 @@ public class HUDController : MonoBehaviour {
             foreach(var p in m_Players){
 
                 if (p.playerIndex == 0)
+                {
                     player1Life.value = p.life;
+                    player1Life.handleRect.gameObject.SetActive(p.hasItem);
+                }
                 else
+                {
                     player2Life.value = p.life;
+                    player2Life.handleRect.gameObject.SetActive(p.hasItem);
+                }
+                
             }
         }
 
