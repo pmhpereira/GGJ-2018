@@ -1,7 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
-public class Interactee : MonoBehaviour {
+public abstract class Interactee : MonoBehaviour
+{
+	protected Interactee()
+	{
 
-	public Event OnActivated;
-	public Event OnDeactivated;
+	}
+
+	public abstract void Activated();
+	public abstract void Deactivated();
 }

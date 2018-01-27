@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4567436442638142}
   - component: {fileID: 212141218275012888}
   - component: {fileID: 61871426982725366}
+  - component: {fileID: 114707759083032026}
   m_Layer: 0
   m_Name: Stair1PH
   m_TagString: Untagged
@@ -66,6 +67,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6979415, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114707759083032026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1490306409514956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b50d4220a9498604494195c26aea13a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActivationLength: 0
 --- !u!212 &212141218275012888
 SpriteRenderer:
   m_ObjectHideFlags: 1

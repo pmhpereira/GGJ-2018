@@ -1,10 +1,17 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
-public class Handle : MonoBehaviour {
+public abstract class Handle : MonoBehaviour {
 
-	protected Event OnChangedOn;
-	protected Event OnChangedOff;
-	protected Event OnToggled;
+	public UnityEvent OnActivated;
+	public UnityEvent OnDeactivated;
 
-	public Interactee Interactee;
+	public virtual bool NeedsManualTrigger { get { return true; } }
+
+	protected Handle()
+	{
+
+	}
+
+	public virtual void ManualToggle() { }
 }
