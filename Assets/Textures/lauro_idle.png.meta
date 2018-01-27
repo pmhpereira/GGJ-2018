@@ -1,9 +1,63 @@
 fileFormatVersion: 2
 guid: 869cb9c2e84921f4ea683f31d34dc68d
-timeCreated: 1517052997
+timeCreated: 1517054828
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: lauro_idle_0
+    21300002: lauro_idle_1
+    21300004: lauro_idle_2
+    21300006: lauro_idle_3
+    21300008: lauro_idle_4
+    21300010: lauro_idle_5
+    21300012: lauro_idle_6
+    21300014: lauro_idle_7
+    21300016: lauro_idle_8
+    21300018: lauro_idle_9
+    21300020: lauro_idle_10
+    21300022: lauro_idle_11
+    21300024: lauro_idle_12
+    21300026: lauro_idle_13
+    21300028: lauro_idle_14
+    21300030: lauro_idle_15
+    21300032: lauro_idle_16
+    21300034: lauro_idle_17
+    21300036: lauro_idle_18
+    21300038: lauro_idle_19
+    21300040: lauro_idle_20
+    21300042: lauro_idle_21
+    21300044: lauro_idle_22
+    21300046: lauro_idle_23
+    21300048: lauro_idle_24
+    21300050: lauro_idle_25
+    21300052: lauro_idle_26
+    21300054: lauro_idle_27
+    21300056: lauro_idle_28
+    21300058: lauro_idle_29
+    21300060: lauro_idle_30
+    21300062: lauro_idle_31
+    21300064: lauro_idle_32
+    21300066: lauro_idle_33
+    21300068: lauro_idle_34
+    21300070: lauro_idle_35
+    21300072: lauro_idle_36
+    21300074: lauro_idle_37
+    21300076: lauro_idle_38
+    21300078: lauro_idle_39
+    21300080: lauro_idle_40
+    21300082: lauro_idle_41
+    21300084: lauro_idle_42
+    21300086: lauro_idle_43
+    21300088: lauro_idle_44
+    21300090: lauro_idle_45
+    21300092: lauro_idle_46
+    21300094: lauro_idle_47
+    21300096: lauro_idle_48
+    21300098: lauro_idle_49
+    21300100: lauro_idle_50
+    21300102: lauro_idle_51
+    21300104: lauro_idle_52
+    21300106: lauro_idle_53
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -40,13 +94,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 256
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -66,9 +120,785 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: lauro_idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2032
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_1
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 2032
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_2
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 2032
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_3
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 2032
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_4
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 2032
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_5
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 2032
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1778
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_7
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1778
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_8
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1778
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_9
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 1778
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_10
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1778
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_11
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 1778
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1524
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_13
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1524
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_14
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1524
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_15
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 1524
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_16
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1524
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_17
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 1524
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1270
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_19
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1270
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_20
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1270
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_21
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 1270
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_22
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1270
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_23
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 1270
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1016
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_25
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1016
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_26
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 1016
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_27
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 1016
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_28
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1016
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_29
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 1016
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 762
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_31
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 762
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_32
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 762
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_33
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 762
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_34
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 762
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_35
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 762
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 508
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_37
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 508
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_38
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 508
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_39
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 508
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_40
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 508
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_41
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 508
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 254
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_43
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 254
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_44
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 254
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_45
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 254
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_46
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 254
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_47
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 254
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_49
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 0
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_50
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 0
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_51
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 0
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_52
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 0
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: lauro_idle_53
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 0
+        width: 149
+        height: 254
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
