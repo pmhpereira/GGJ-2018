@@ -15,6 +15,7 @@ TagManager:
   - PlayerPosition
   - PlayerArrow
   - PlayerHUD
+  - Background
   layers:
   - Default
   - TransparentFX
