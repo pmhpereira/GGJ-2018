@@ -6,8 +6,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-
-    public enum GameState { None, Start, Playing, Paused, GameOver }
+    public enum GameState { None, Start, Playing, Paused, GameOver, Finished }
     public GameState gameState { get { return m_CurrentGameState; }}
     private GameState m_CurrentGameState = GameState.None;
     private GameState m_PreviousGameState = GameState.None;
@@ -37,6 +36,10 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private Transform m_PauseMenu;
     [SerializeField]
+    private Transform m_GameOverMenu;
+    [SerializeField]
+    private Transform m_GameFinishedMenu;
+    [SerializeField]
     private HUDController m_Hud;
     [SerializeField]
     private PlayerController m_Player1Prefab;
@@ -45,9 +48,11 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private Data.LevelPair[] m_LevelsPrefabs;
 
+    private Transform m_LastMenu;
+
     private int m_CurrentLevelIndex = 0;
     private Data.LevelPair m_CurrentLevel;
-    private Data.Player[] m_Players = new Data.Player[2]; //well, were only gonna hasve 2 :p
+    private Data.Player[] m_Players = new Data.Player[2]; //well, were only gonna have 2 :p
     private PlayerController[] m_PlayerGameObjects = new PlayerController[2];
 
     private void Awake()
@@ -64,7 +69,86 @@ public class GameController : MonoBehaviour
         _ChangeState(GameState.Start);
     }
 
-    private void _Init(){
+    private void _SetMenuState(Transform menu, bool state){
+        menu.gameObject.SetActive(state);
+        m_LastMenu = state ? menu : null;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // Checks state transitions
+        if (m_CurrentGameState != m_PreviousGameState)
+        {
+            m_PreviousGameState = m_CurrentGameState;
+            //handle game state changes here
+            switch (m_CurrentGameState)
+            {
+                case GameState.Start:
+                    // Game is loaded, showing start screen
+                    Debug.Log("Game has started");
+
+                    m_Hud.gameObject.SetActive(false);
+                    _SetMenuState(m_MainMenu, true);
+                    Time.timeScale = 0f;
+
+                    break;
+                case GameState.Playing:
+                    // setup right before  playing
+                    m_Hud.gameObject.SetActive(true);
+                    _SetMenuState(m_MainMenu, false);
+                    Time.timeScale = 1f;
+
+                    break;
+                case GameState.Paused:
+                    _SetMenuState(m_PauseMenu, true);
+                    Time.timeScale = 0f;
+                    break;
+                case GameState.GameOver:
+                    // on game over
+                    Debug.Log("Game Over!");
+                    _SetMenuState(m_GameOverMenu, true);
+                    Time.timeScale = 0f;
+
+                    break;
+                case GameState.Finished:
+                    // on game over
+                    Debug.Log("Game finished!");
+                    _SetMenuState(m_GameFinishedMenu, true);
+                    Time.timeScale = 0f;
+
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        // Checks game over / finish conditions
+        switch (m_CurrentGameState)
+        {
+            case GameState.Playing:
+
+                // setup right before  playing
+                //Debug.LogFormat("Player 1 life: {0}; Player 2 life: {1}", m_Players[0].life, m_Players[1].life);
+                _CheckGameOver();
+
+                break;
+            default:
+                break;
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.P))
+            OnPause();
+        if (Input.GetKeyDown(KeyCode.L))
+            _ChangeState(GameState.GameOver);
+
+        if (Input.GetKeyDown(KeyCode.K))
+            _ChangeState(GameState.Finished);
+    }
+
+    private void _Init()
+    {
         //instantiate first level?
         m_CurrentLevelIndex = 0;
         LoadLevel(m_CurrentLevelIndex);
@@ -80,7 +164,6 @@ public class GameController : MonoBehaviour
 
     private void _InitPlayers(float playerLife)
     {
-
         Data.Player p1 = new Data.Player(0, playerLife, playerSpeed);
         m_Players[0] = p1;
         Data.Player p2 = new Data.Player(1, playerLife, playerSpeed);
@@ -96,7 +179,6 @@ public class GameController : MonoBehaviour
 
         m_P1Cam.target = player1gameObject.transform;
         m_P2Cam.target = player2gameObject.transform;
-
     }
 
     public void LoadLevel(int levelIndex, bool force = false)
@@ -122,127 +204,96 @@ public class GameController : MonoBehaviour
         LoadLevel(m_CurrentLevelIndex);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-        if (m_CurrentGameState != m_PreviousGameState)
-        {
-            m_PreviousGameState = m_CurrentGameState;
-            //handle game state changes here
-            switch (m_CurrentGameState)
-            {
-                case GameState.Start:
-                    // Game is loaded, showing start screen
-                    Debug.Log("Game has started");
-
-                    _SetHudState(false);
-                    _SetMainMenuState(true);
-                    Time.timeScale = 0f;
-
-                    break;
-                case GameState.Playing:
-                    // setup right before  playing
-                    _SetHudState(true);
-                    _SetMainMenuState(false);
-                    Time.timeScale = 1f;
-
-                    break;
-                case GameState.Paused:
-                    m_PauseMenu.gameObject.SetActive(true);
-                    Time.timeScale = 0f;
-                    break;
-                case GameState.GameOver:
-                    // on game over
-                    Debug.Log("Game Over!");
-
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        switch (m_CurrentGameState)
-        {
-            case GameState.Playing:
-
-                // setup right before  playing
-                Debug.LogFormat("Player 1 life: {0}; Player 2 life: {1}", m_Players[0].life, m_Players[1].life);
-                _CheckGameOver();
-
-                break;
-            default:
-                break;
-        }
-
-
-        if (Input.GetKeyDown(KeyCode.P))
-            OnPause();
-
-
-    }
-
-    private void _SetHudState(bool state)
-    {
-        m_Hud.gameObject.SetActive(state);
-    }
-
-    private void _SetMainMenuState(bool state)
-    {
-        //load start menu?
-        if (m_MainMenu != null)
-            m_MainMenu.gameObject.SetActive(state);
-    }
-
     private void _CheckGameOver()
     {
+        int reachedEnd = 0;
         foreach (var player in m_Players)
         {
             if (player.life <= 0f)
+            {
                 _ChangeState(GameState.GameOver);
+                return;
+            }
+            if (player.reachedEnd)
+                reachedEnd++;
+        }
+        if (reachedEnd == m_PlayerGameObjects.Length) //both reached end
+        { 
+            _ChangeState(GameState.Finished);
+            return;
         }
     }
 
     private void _ChangeState(GameState newState)
     {
+        if(m_LastMenu != null)
+        {
+            m_LastMenu.gameObject.SetActive(false);
+            m_LastMenu = null;
+        }
+
         m_PreviousGameState = m_CurrentGameState;
         m_CurrentGameState = newState;
     }
 
+    private void _Cleanup()
+    {
+        if (m_PlayerGameObjects != null)
+        {
+            foreach (var p in m_PlayerGameObjects)
+                Destroy(p.gameObject);
+        }
+        if (m_CurrentLevel != null)
+        {
+            Destroy(m_CurrentLevel.p1Level.gameObject);
+            Destroy(m_CurrentLevel.p2Level.gameObject);
+        }
+    }
+
+#region BUTTON_CALLBACKS
     public void OnNewGame()
     {
         _ChangeState(GameState.Playing);
     }
 
     public void OnResume(){
-        if (gameState == GameState.Paused){
-            _ChangeState(GameState.Playing);
-            m_PauseMenu.gameObject.SetActive(false);
-        }
+        //if (gameState == GameState.Paused){
+        //    _ChangeState(GameState.Playing);
+        //    m_PauseMenu.gameObject.SetActive(false);
+        //}
+        m_LastMenu.gameObject.SetActive(false);
+        _ChangeState(GameState.Playing);
     }
 
     public void OnGoToMainMenu(){
         _Cleanup();
         _Init();
-        m_PauseMenu.gameObject.SetActive(false);
+
+        //m_LastMenu.gameObject.SetActive(false);
         _ChangeState(GameState.Start);
+
+        //if (gameState == GameState.Paused)
+        //{
+        //    m_PauseMenu.gameObject.SetActive(false);
+        //}
+        //else if(gameState == GameState.GameOver)
+        //_ChangeState(GameState.Start);
+    }
+
+    public void OnRetry(){
+        if(gameState == GameState.GameOver){
+            _Cleanup();
+            _Init();
+            //m_GameOverMenu.gameObject.SetActive((false));
+            _ChangeState(GameState.Playing);
+        }
     }
 
     public void OnPause(){
         if (gameState == GameState.Playing)
             _ChangeState(GameState.Paused);
     }
-
-    private void _Cleanup(){
-        if(m_PlayerGameObjects != null){
-            foreach (var p in m_PlayerGameObjects)
-                Destroy(p.gameObject);
-        }
-        if(m_CurrentLevel != null){
-            Destroy(m_CurrentLevel.p1Level.gameObject);
-            Destroy(m_CurrentLevel.p2Level.gameObject);
-        }
-    }
+#endregion
 
     public void OnQuit()
     {

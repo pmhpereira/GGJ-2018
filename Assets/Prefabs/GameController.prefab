@@ -57,11 +57,15 @@ MonoBehaviour:
   m_P2Cam: {fileID: 0}
   playerSpeed: 5
   levelTime: 120
+  m_MainMenu: {fileID: 0}
+  m_PauseMenu: {fileID: 0}
+  m_GameOverMenu: {fileID: 0}
+  m_GameFinishedMenu: {fileID: 0}
   m_Hud: {fileID: 0}
   m_Player1Prefab: {fileID: 114163443106833684, guid: 03255fe0f1fa64f19abe6c21895c9581,
     type: 2}
   m_Player2Prefab: {fileID: 114163443106833684, guid: 03255fe0f1fa64f19abe6c21895c9581,
     type: 2}
   m_LevelsPrefabs:
-  - p1Level: {fileID: 4299867739299614, guid: fcd38381bd9004452b72101e2ee38eff, type: 2}
-    p2Level: {fileID: 4903816230917394, guid: 22327fd991b5c43e8adeb3f574445ecc, type: 2}
+  - p1Level: {fileID: 4507126050721528, guid: 394bb7873dae94627b8f3b68b7ec9c91, type: 2}
+    p2Level: {fileID: 4250519727049572, guid: f130e472e4b0f476b9b4afec6db1a13a, type: 2}
