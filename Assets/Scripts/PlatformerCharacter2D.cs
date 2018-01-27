@@ -59,6 +59,7 @@ public class PlatformerCharacter2D : MonoBehaviour
 
 	public void Move(float hMove, float vMove, bool crouch, bool jump, bool climb)
 	{
+		/** /
 		// If crouching, check to see if the character can stand up
 		if (!crouch && m_Anim.GetBool("Crouch"))
 		{
@@ -73,6 +74,7 @@ public class PlatformerCharacter2D : MonoBehaviour
 
 		// Set whether or not the character is crouching in the animator
 		m_Anim.SetBool("Crouch", crouch);
+		/**/
 
 		if (climb)
 		{
