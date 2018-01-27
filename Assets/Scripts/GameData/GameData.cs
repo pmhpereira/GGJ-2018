@@ -50,6 +50,11 @@ public class Data
     public class LevelPair{
         public Transform p1Level;
         public Transform p2Level;
+
+        public void DestroyLevels(){
+            UnityEngine.Object.Destroy(p1Level.gameObject);
+            UnityEngine.Object.Destroy(p2Level.gameObject);
+        }
     }
 
 }
