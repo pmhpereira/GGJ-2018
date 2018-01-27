@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour {
 
     public void Init(Data.Player player){
         m_Player = player;
+        m_UserControl.HorizontalBind = string.Format("P{0}_Horizontal", m_Player.playerIndex);
+        m_UserControl.JumpBind = string.Format("P{0}_Jump", m_Player.playerIndex);
     }
 
 	// Use this for initialization
