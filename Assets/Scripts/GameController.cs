@@ -173,14 +173,14 @@ public class GameController : MonoBehaviour
 
     private void _Init()
     {
-        //instantiate first level?
-        m_CurrentLevelIndex = 0;
-        _LoadLevel(m_CurrentLevelIndex);
-
         float playerLife = levelTime / 2f;
 
         //instantiate players
         _InitPlayers(playerLife);
+
+        //instantiate first level?
+        m_CurrentLevelIndex = 0;
+        _LoadLevel(m_CurrentLevelIndex);
 
         //load hud
         m_Hud.Init(playerLife, m_Players);
@@ -219,8 +219,18 @@ public class GameController : MonoBehaviour
         m_CurrentLevel.p1Level = p1LevelInstance;
         m_CurrentLevel.p2Level = p2LevelInstance;
 
-        m_CurrentLevel.p1Level.transform.localPosition = Vector3.one * -10f;
-        m_CurrentLevel.p2Level.transform.localPosition = Vector3.one * -10f;
+        ////doubel check this
+        //m_CurrentLevel.p1Level.transform.localPosition = Vector3.one * -10f;
+        //m_CurrentLevel.p2Level.transform.localPosition = Vector3.one * -10f;
+
+        var p1StartPoint = p1LevelInstance.GetComponent<StartPoint>();
+        var p2StartPoint = p2LevelInstance.GetComponent<StartPoint>();
+
+        if (p1StartPoint != null && p2StartPoint != null)
+        {
+            m_PlayerGameObjects[0].transform.position = p1StartPoint.startPosition;
+            m_PlayerGameObjects[1].transform.position = p2StartPoint.startPosition;
+        }
     }
 
     private void _ResetLevel()
