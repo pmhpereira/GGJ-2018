@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour
 
 	private void _UpdatePlayer()
 	{
+
 		if (m_Ladder != null)
 		{
 			float v = CrossPlatformInputManager.GetAxis(string.Format("P{0}_Vertical", PlayerIndex));
@@ -67,7 +68,6 @@ public class PlayerController : MonoBehaviour
         {
             if (m_Player.hasItem)
                 m_Player.life -= Time.deltaTime;
-
 
             if (m_PlatformerCharacter != null)
                 m_PlatformerCharacter.maxRunningSpeed = m_Player.speed;

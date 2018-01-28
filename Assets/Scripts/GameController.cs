@@ -146,6 +146,8 @@ public class GameController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.K))
             _ChangeState(GameState.Finished);
+        if (Input.GetKeyDown(KeyCode.T))
+            TransferIdol();
     }
 
     private void _CheckTrade()
@@ -153,10 +155,12 @@ public class GameController : MonoBehaviour
         Data.Player p1 = m_Players[0];
         Data.Player p2 = m_Players[1];
         if(p1.wantsSwitch && p2.wantsSwitch){
-            p2.hasItem = !p2.hasItem;
-            p1.hasItem = !p1.hasItem;
-			p1.wantsSwitch = false;
-			p2.wantsSwitch = false;
+            
+   //         p2.hasItem = !p2.hasItem;
+   //         p1.hasItem = !p1.hasItem;
+			//p1.wantsSwitch = false;
+			//p2.wantsSwitch = false;
+            TransferIdol();
 		}
     }
 
@@ -164,7 +168,7 @@ public class GameController : MonoBehaviour
     {
         //instantiate first level?
         m_CurrentLevelIndex = 0;
-        LoadLevel(m_CurrentLevelIndex);
+        _LoadLevel(m_CurrentLevelIndex);
 
         float playerLife = levelTime / 2f;
 
@@ -195,7 +199,7 @@ public class GameController : MonoBehaviour
         m_P2Cam.target = player2gameObject.transform;
     }
 
-    public void LoadLevel(int levelIndex, bool force = false)
+    private void _LoadLevel(int levelIndex, bool force = false)
     {
         if (m_CurrentLevelIndex != levelIndex)
         {
@@ -215,7 +219,7 @@ public class GameController : MonoBehaviour
     private void _ResetLevel()
     {
         m_CurrentLevelIndex = 0;
-        LoadLevel(m_CurrentLevelIndex);
+        _LoadLevel(m_CurrentLevelIndex);
     }
 
     private void _CheckGameOver()
@@ -262,6 +266,34 @@ public class GameController : MonoBehaviour
             Destroy(m_CurrentLevel.p1Level.gameObject);
             Destroy(m_CurrentLevel.p2Level.gameObject);
         }
+    }
+
+    public bool isTransferingIdol = false;
+
+    public void TransferIdol(){
+
+        Camera p1camera = m_P1Cam.gameObject.GetComponent<Camera>();
+        Camera p2camera = m_P2Cam.gameObject.GetComponent<Camera>();
+
+        Vector3 p1WorldPos = m_PlayerGameObjects[0].transform.position;
+        Vector3 p1ScreenPos = p1camera.WorldToScreenPoint(p1WorldPos);
+
+        Vector3 p2WorldPos = m_PlayerGameObjects[1].transform.position;
+        Vector3 p2ScreenPos = p2camera.WorldToScreenPoint(p2WorldPos);
+
+        Vector3 orig = m_Players[0].hasItem ? p1ScreenPos : p2ScreenPos;
+        Vector3 dest = orig == p1ScreenPos ? p2ScreenPos : p1ScreenPos;
+
+        Time.timeScale = 0f;
+        m_Hud.AnimateIdolTransfer(orig, dest, ()=> {
+
+            m_Players[0].hasItem = !m_Players[0].hasItem;
+            m_Players[1].hasItem = !m_Players[1].hasItem;
+            m_Players[0].wantsSwitch = false;
+            m_Players[1].wantsSwitch = false;
+
+            Time.timeScale = 1f;
+        });
     }
 
 #region BUTTON_CALLBACKS
