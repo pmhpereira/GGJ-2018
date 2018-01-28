@@ -34,15 +34,15 @@ public class AudioManager : MonoBehaviour
         if (m_BGM != null)
         {
             if (force)
-                m_SFX.Stop();
-            else if (m_SFX.isPlaying)
+                m_BGM.Stop();
+            else if (m_BGM.isPlaying)
                 return;
 
             AudioClip newClip = (AudioClip)Resources.Load("BGM/" + name);
             if (newClip != null)
             {
-                m_SFX.clip = newClip;
-                m_SFX.Play();
+                m_BGM.clip = newClip;
+                m_BGM.Play();
             }
         }
 
