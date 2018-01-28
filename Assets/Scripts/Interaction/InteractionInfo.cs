@@ -31,7 +31,10 @@ public class InteractionInfo : MonoBehaviour {
 	void Update () {
 		if (m_Player != null && m_Player.currentInteractionInfo != m_ShowingInteraction){
             m_ShowingInteraction = m_Player.currentInteractionInfo;
-
+            if (m_ShowingInteraction == Data.Player.Interaction.NotInteractable)
+            {
+                AudioManager.Instance.PlaySFX("wrong", true);
+            }
             m_SpriteRenderer.sprite = _Find();
         }
 	}
