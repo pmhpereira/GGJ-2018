@@ -92,8 +92,14 @@ public class PlayerController : MonoBehaviour
 	{
 		if (m_Handle != null && m_Handle.NeedsManualTrigger)
 		{
-			if (Input.GetButtonDown(string.Format("P{0}_Activate", PlayerIndex)))
-				m_Handle.ManualToggle();
+            if (Input.GetButtonDown(string.Format("P{0}_Activate", PlayerIndex)))
+            {
+                var cena = m_Handle.GetType();
+
+                if (cena == typeof(Lever))
+                    AudioManager.Instance.PlaySFX("lever", true);
+                m_Handle.ManualToggle();
+            }
 		}
 
 		//some specific input..

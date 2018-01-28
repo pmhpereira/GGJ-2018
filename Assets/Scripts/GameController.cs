@@ -105,6 +105,7 @@ public class GameController : MonoBehaviour
 
                     break;
                 case GameState.Paused:
+                    AudioManager.Instance.PlayBGM("menu", true, true);
                     _SetMenuState(m_PauseMenu, true);
                     Time.timeScale = 0f;
                     break;
@@ -117,6 +118,7 @@ public class GameController : MonoBehaviour
                     break;
                 case GameState.Finished:
                     // on game over
+                    AudioManager.Instance.PlaySFX("checkpoint", true);
                     Debug.Log("Game finished!");
                     _SetMenuState(m_GameFinishedMenu, true);
                     Time.timeScale = 0f;
@@ -303,6 +305,8 @@ public class GameController : MonoBehaviour
 #region BUTTON_CALLBACKS
     public void OnNewGame()
     {
+        AudioManager.Instance.PlaySFX("start", true);
+        AudioManager.Instance.StopBGM();
         _ChangeState(GameState.Playing);
     }
 

@@ -33,6 +33,11 @@ public class AudioManager : MonoBehaviour
         StartCoroutine(PlayIntro());
     }
 
+    public void StopBGM()
+    {
+        m_BGM.Stop();
+    }
+
     IEnumerator PlayIntro(){
 
         PlayBGM("gameIntro", true);
