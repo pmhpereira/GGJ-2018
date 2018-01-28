@@ -296,6 +296,8 @@ public class GameController : MonoBehaviour
     public bool isTransferingIdol = false;
 
     public void TransferIdol(){
+        if (!m_Players[0].hasItem && !m_Players[1].hasItem)
+            return;
 
         Camera p1camera = m_P1Cam.gameObject.GetComponent<Camera>();
         Camera p2camera = m_P2Cam.gameObject.GetComponent<Camera>();
