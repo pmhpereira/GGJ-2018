@@ -14,17 +14,39 @@ public class Platformer2DUserControl : MonoBehaviour
 	private bool m_Jump;
 	private bool m_Climb;
 
+    //private Rigidbody2D m_Rigidbody2D;
+
 	private void Awake()
 	{
         m_PlayerController = GetComponent<PlayerController>();
 		m_Character = GetComponent<PlatformerCharacter2D>();
+        //m_Rigidbody2D = GetComponent<Rigidbody2D>();
+
 	}
+
+    Vector3 m_CurrVelocity;
 
 	private void Update()
 	{
-		if (!m_Jump)
+        //m_CurrVelocity = m_Rigidbody2D.velocity;
+
+        ////if(m_PlayerController.PlayerIndex == 1)
+        //Debug.Log(m_CurrVelocity);
+        //bool jumpInput = CrossPlatformInputManager.GetButtonDown(JumpBind);
+
+        //if (jumpInput)
+        //    Debug.Log("jump");
+
+        //if(jumpInput){
+        //    if (!m_Jump)
+        //        m_Jump = jumpInput;
+        //}
+
+        if (!m_Jump && v == 0f)
 			m_Jump = CrossPlatformInputManager.GetButtonDown(JumpBind);
 	}
+
+    float v, h;
 
 	private void FixedUpdate()
 	{
@@ -33,8 +55,8 @@ public class Platformer2DUserControl : MonoBehaviour
 
 		// Read the inputs.
 		bool crouch = Input.GetKey(KeyCode.LeftControl);
-		float h = CrossPlatformInputManager.GetAxis(HorizontalBind);
-		float v = CrossPlatformInputManager.GetAxis(VerticalBind);
+		h = CrossPlatformInputManager.GetAxis(HorizontalBind);
+		v = CrossPlatformInputManager.GetAxis(VerticalBind);
 
 		m_Climb = (v != 0);
 

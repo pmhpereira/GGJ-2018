@@ -193,7 +193,7 @@ public class GameController : MonoBehaviour
     private void _InitPlayers(float playerLife)
     {
         Data.Player p1 = new Data.Player(0, playerLife, playerSpeed);
-		p1.hasItem = true;
+		//p1.hasItem = true;
         m_Players[0] = p1;
         Data.Player p2 = new Data.Player(1, playerLife, playerSpeed);
         m_Players[1] = p2;
@@ -296,6 +296,8 @@ public class GameController : MonoBehaviour
     public bool isTransferingIdol = false;
 
     public void TransferIdol(){
+        if (!m_Players[0].hasItem && !m_Players[1].hasItem)
+            return;
 
         Camera p1camera = m_P1Cam.gameObject.GetComponent<Camera>();
         Camera p2camera = m_P2Cam.gameObject.GetComponent<Camera>();

@@ -8,7 +8,8 @@ public class Elevator : Interactee
 	public float speed;
 	public int yDirection = 1; // up
 
-	public float currentLength;
+    public float prevlength = 0f;
+	public float currentLength = 1f;
 
 	private float startingHeight;
 	private Vector3 startingTransform;
@@ -30,6 +31,7 @@ public class Elevator : Interactee
 	public void Start()
 	{
 		currentLength = Mathf.Clamp(currentLength, minLength, maxLength);
+        currentLength = maxLength;
 		cart = transform.Find("Cart");
 		startingHeight = currentLength;
 		startingTransform = cart.localPosition;
@@ -38,10 +40,10 @@ public class Elevator : Interactee
 	public void Update()
 	{
 		currentLength += -yDirection * speed * Time.deltaTime;
-        if (currentLength > maxLength || currentLength < minLength)
+        if ( prevlength == currentLength && (currentLength > maxLength || currentLength < minLength))
             AudioManager.Instance.PlaySFX("ding", true);
 		currentLength = Mathf.Clamp(currentLength, minLength, maxLength);
-
+        prevlength = currentLength;
 		cart.localPosition = startingTransform + Vector3.up * (startingHeight - currentLength);
 	}
 }

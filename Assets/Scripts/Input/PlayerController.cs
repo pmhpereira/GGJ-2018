@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
     private void _UpdatePlayer()
 	{
 
-        if (m_Ladder != null && !player.hasItem)
+        if (m_Ladder != null && !player.hasItem && !player.wantsSwitch)
 		{
 			float v = CrossPlatformInputManager.GetAxis(string.Format("P{0}_Vertical", PlayerIndex));
 			if (m_Step == m_Ladder.bottomStep && v > 0)
@@ -120,7 +120,7 @@ public class PlayerController : MonoBehaviour
         //if (Input.GetKeyDown(KeyCode.I))
         //m_Player.hasItem = !m_Player.hasItem;
 
-        if (Input.GetButton(string.Format("P{0}_Switch", /*m_Player.playerIndex+1*/ PlayerIndex)))
+        if (Input.GetButton(string.Format("P{0}_Switch", /*m_Player.playerIndex+1*/ PlayerIndex)) && m_PlatformerCharacter.isGrounded)
             m_Player.wantsSwitch = true;
         else
             m_Player.wantsSwitch = false;
@@ -128,6 +128,12 @@ public class PlayerController : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collider)
 	{
+        if(collider.name.Contains("Idol"))
+        {
+            m_Player.hasItem = true;
+            Destroy(collider.gameObject);
+        }
+
 		Handle handle = collider.gameObject.GetComponent<Handle>();
 		if (handle != null)
 		{
