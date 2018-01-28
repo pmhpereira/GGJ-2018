@@ -71,8 +71,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1293452589199106}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4324737182489574}
@@ -201,6 +201,9 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294967295
+  m_Grounded: 0
+  m_Climbing: 0
+  canGround: 0
 --- !u!114 &114644070271607120
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -236,6 +239,8 @@ MonoBehaviour:
   JumpBind: P1_Jump
   HorizontalBind: P1_Horizontal
   VerticalBind: P1_Vertical
+  m_Jump: 0
+  m_Climb: 0
 --- !u!212 &212179960945384590
 SpriteRenderer:
   m_ObjectHideFlags: 1
