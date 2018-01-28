@@ -6,6 +6,8 @@ using System;
 
 public class PlayerController : MonoBehaviour
 {
+    public Data.Player player { get { return m_Player; } }
+
 	private Data.Player m_Player; //get speed from here, theoretically, it returns the correct speed
 	private PlatformerCharacter2D m_PlatformerCharacter;
 	private Platformer2DUserControl m_UserControl;
@@ -52,7 +54,7 @@ public class PlayerController : MonoBehaviour
     private void _UpdatePlayer()
 	{
 
-		if (m_Ladder != null)
+        if (m_Ladder != null && !player.hasItem)
 		{
 			float v = CrossPlatformInputManager.GetAxis(string.Format("P{0}_Vertical", PlayerIndex));
 			if (m_Step == m_Ladder.bottomStep && v > 0)
@@ -80,7 +82,14 @@ public class PlayerController : MonoBehaviour
             }
             else if (m_Handle != null)
             {
-                m_Player.currentInteractionInfo = m_Player.hasItem ? Data.Player.Interaction.NotInteractable : Data.Player.Interaction.Interactable;
+                var handleType = m_Handle.GetType();
+                if(handleType == typeof(Lever))
+                    m_Player.currentInteractionInfo = m_Player.hasItem ? Data.Player.Interaction.NotInteractable : Data.Player.Interaction.Interactable;
+                else if(handleType == typeof(PressurePlate))
+                    m_Player.currentInteractionInfo = !m_Player.hasItem ? Data.Player.Interaction.NotInteractable : Data.Player.Interaction.Interactable;
+            }
+            else if(m_Ladder != null){
+                m_Player.currentInteractionInfo = !m_Player.hasItem ? Data.Player.Interaction.None : Data.Player.Interaction.NotInteractable;
             }
             else
                 m_Player.currentInteractionInfo = Data.Player.Interaction.None;
@@ -99,7 +108,9 @@ public class PlayerController : MonoBehaviour
 
                 if (cena == typeof(Lever))
                     AudioManager.Instance.PlaySFX("lever", false);
-                m_Handle.ManualToggle();
+
+                if(!m_Player.hasItem)
+                    m_Handle.ManualToggle();
             }
 		}
 
