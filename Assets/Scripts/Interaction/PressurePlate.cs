@@ -8,6 +8,9 @@ public class PressurePlate : Handle
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
+        if (!other.GetComponent<PlayerController>().player.hasItem)
+            return;
+
 		Activated = true;
 		OnActivated.Invoke();
 	}
