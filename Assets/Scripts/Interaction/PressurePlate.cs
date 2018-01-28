@@ -8,6 +8,9 @@ public class PressurePlate : Handle
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
+		if (Activated)
+			return;
+
         if (!other.GetComponent<PlayerController>().player.hasItem)
             return;
 
@@ -17,7 +20,24 @@ public class PressurePlate : Handle
 
 	void OnTriggerExit2D(Collider2D other)
 	{
+		if (!Activated)
+			return;
+
 		Activated = false;
 		OnDeactivated.Invoke();
+	}
+
+	void OnTriggerStay2D(Collider2D other)
+	{
+		if (other.GetComponent<PlayerController>().player.hasItem && !Activated)
+		{
+			Activated = true;
+			OnActivated.Invoke();
+		}
+		else if(!other.GetComponent<PlayerController>().player.hasItem && Activated)
+		{
+			Activated = false;
+			OnDeactivated.Invoke();
+		}
 	}
 }
