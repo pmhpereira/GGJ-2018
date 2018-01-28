@@ -10,11 +10,13 @@ public class Ladder : Interactee
 
 	public override void Activated()
 	{
+        AudioManager.Instance.PlaySFX("ladderopen", false);
 		transform.position += Vector3.up * ActivationLength;
 	}
 
 	public override void Deactivated()
 	{
-		transform.position -= Vector3.up * ActivationLength;
+        AudioManager.Instance.PlaySFX("ladderopen", false);
+        transform.position -= Vector3.up * ActivationLength;
 	}
 }

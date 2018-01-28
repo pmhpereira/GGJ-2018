@@ -3,19 +3,23 @@
 // Adapted from UnityStandardAssets._2D.PlatformerCharacter2D
 public class PlatformerCharacter2D : MonoBehaviour
 {
-	public float maxRunningSpeed { get { return m_MaxRunningSpeed; } set { m_MaxRunningSpeed = value; } }
-	public float maxClimbingSpeed { get { return m_MaxClimbingSpeed; } set { m_MaxClimbingSpeed = value; } }
+    public float maxRunningSpeed { get { return m_MaxRunningSpeed; } set { m_MaxRunningSpeed = value; } }
+    public float maxClimbingSpeed { get { return m_MaxClimbingSpeed; } set { m_MaxClimbingSpeed = value; } }
 
-	public bool canClimb;
+    public bool canClimb;
+    public bool isGrounded { get { return m_Grounded; } }
 
-	[SerializeField] private float m_MaxRunningSpeed = 10f;                    // The fastest the player can travel in the x axis.
-	[SerializeField] private float m_MaxClimbingSpeed = 3f;                    // The fastest the player can travel in the ys axis.
-	[SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
-	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
-	[SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
-	[SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
+    [SerializeField] private float m_MaxRunningSpeed = 10f;                    // The fastest the player can travel in the x axis.
+    [SerializeField] private float m_MaxClimbingSpeed = 3f;                    // The fastest the player can travel in the ys axis.
+    [SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
+    [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
+    [SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
+    [SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
 
-	private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
+    [SerializeField]
+    private AudioSource m_Footsteps;
+
+    private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
 	private bool m_Grounded;            // Whether or not the player is grounded.
 	private bool m_Climbing;            // Whether or not the player is climbing.
 	const float k_GroundedRadius = .01f; // Radius of the overlap circle to determine if grounded
@@ -25,16 +29,16 @@ public class PlatformerCharacter2D : MonoBehaviour
 	private Rigidbody2D m_Rigidbody2D;
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 
-	private void Awake()
+    private void Awake()
 	{
 		// Setting up references.
 		m_GroundCheck = transform.Find("GroundCheck");
 		m_CeilingCheck = transform.Find("CeilingCheck");
 		m_Anim = GetComponent<Animator>();
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
-	}
+    }
 
-	private bool canGround;
+    private bool canGround;
 
 	private void FixedUpdate()
 	{
@@ -165,8 +169,19 @@ public class PlatformerCharacter2D : MonoBehaviour
         {
             if (m_Anim.GetCurrentAnimatorStateInfo(0).IsName("Walk"))
             {
-                AudioManager.Instance.PlayFootsteps("walking", true);
+                if (!m_Footsteps.isPlaying)
+                    m_Footsteps.Play();
             }
+            else
+            {
+                if (m_Footsteps.isPlaying)
+                    m_Footsteps.Stop();
+            }
+        }
+        else
+        {
+            if (m_Footsteps.isPlaying)
+                m_Footsteps.Stop();
         }
 	}
 

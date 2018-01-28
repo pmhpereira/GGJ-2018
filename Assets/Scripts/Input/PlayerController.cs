@@ -2,6 +2,7 @@
 using UnityStandardAssets._2D;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine.UI;
+using System;
 
 public class PlayerController : MonoBehaviour
 {
@@ -48,7 +49,7 @@ public class PlayerController : MonoBehaviour
 		_UpdatePlayer();
 	}
 
-	private void _UpdatePlayer()
+    private void _UpdatePlayer()
 	{
 
 		if (m_Ladder != null)
@@ -97,7 +98,7 @@ public class PlayerController : MonoBehaviour
                 var cena = m_Handle.GetType();
 
                 if (cena == typeof(Lever))
-                    AudioManager.Instance.PlaySFX("lever", true);
+                    AudioManager.Instance.PlaySFX("lever", false);
                 m_Handle.ManualToggle();
             }
 		}

@@ -17,12 +17,13 @@ public class Elevator : Interactee
 
 	public override void Activated()
 	{
+        AudioManager.Instance.PlaySFX("elevatormusic", true);
 		yDirection = -yDirection;
 	}
 
 	public override void Deactivated()
 	{
-
+        AudioManager.Instance.PlaySFX("ding", true);
 		yDirection = -yDirection;
 	}
 
