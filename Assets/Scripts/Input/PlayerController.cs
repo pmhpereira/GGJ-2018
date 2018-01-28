@@ -126,6 +126,12 @@ public class PlayerController : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collider)
 	{
+        if(collider.name.Contains("Idol"))
+        {
+            m_Player.hasItem = true;
+            Destroy(collider.gameObject);
+        }
+
 		Handle handle = collider.gameObject.GetComponent<Handle>();
 		if (handle != null)
 		{
