@@ -85,9 +85,11 @@ public class PlayerController : MonoBehaviour
                 var handleType = m_Handle.GetType();
                 if(handleType == typeof(Lever))
                     m_Player.currentInteractionInfo = m_Player.hasItem ? Data.Player.Interaction.NotInteractable : Data.Player.Interaction.Interactable;
-                else if(handleType == typeof(PressurePlate))
-                    m_Player.currentInteractionInfo = !m_Player.hasItem ? Data.Player.Interaction.NotInteractable : Data.Player.Interaction.Interactable;
-            }
+				else if (handleType == typeof(PressurePlate))
+					m_Player.currentInteractionInfo = !m_Player.hasItem ? Data.Player.Interaction.NotInteractable : Data.Player.Interaction.Interactable;
+				else if (handleType == typeof(Altar))
+					m_Player.currentInteractionInfo = !m_Player.hasItem ? Data.Player.Interaction.NotInteractable : Data.Player.Interaction.None;
+			}
             else if(m_Ladder != null){
                 m_Player.currentInteractionInfo = !m_Player.hasItem ? Data.Player.Interaction.None : Data.Player.Interaction.NotInteractable;
             }
@@ -168,6 +170,12 @@ public class PlayerController : MonoBehaviour
 			m_Ladder = null;
 			m_Step = null;
 			return;
+		}
+
+		if (collider.name.Contains("End"))
+		{
+			if (m_Player != null)
+				m_Player.reachedEnd = false;
 		}
 	}
 }
