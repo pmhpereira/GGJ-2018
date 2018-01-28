@@ -515,6 +515,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1Life: {fileID: 114914450317861396}
   player2Life: {fileID: 114228102812365622}
+  m_IdolTransferScaleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 6.323712
+      outSlope: 6.323712
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.48965812
+      value: 2.0007224
+      inSlope: 0.0037124322
+      outSlope: 0.0037124322
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: -7.265783
+      outSlope: -7.265783
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  m_IdolTransferPrefab: {fileID: 114132447132752468, guid: b48bf11edaa7a4aa7a52c9e830f12351,
+    type: 2}
 --- !u!114 &114702797559594342
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -10,6 +10,11 @@ public class HUDController : MonoBehaviour {
     [SerializeField]
     private Slider player2Life;
 
+    [SerializeField]
+    private AnimationCurve m_IdolTransferScaleCurve;
+    [SerializeField]
+    private Image m_IdolTransferPrefab;
+
     private Data.Player[] m_Players;
 
     public void Init(float maxLife, Data.Player[] players){
@@ -44,4 +49,27 @@ public class HUDController : MonoBehaviour {
         }
 
 	}
+
+    private LTDescr m_IdolTween;
+
+    public void AnimateIdolTransfer(Vector3 origin, Vector3 destination, System.Action cb = null){
+
+        if (m_IdolTween != null)
+            return;
+
+        Image idolInstance = Instantiate(m_IdolTransferPrefab, transform.parent);
+        idolInstance.transform.SetAsLastSibling();
+
+        m_IdolTween = LeanTween.value(idolInstance.gameObject, (float val) =>
+        {
+            idolInstance.transform.position = Vector3.Lerp(origin, destination, val);
+            idolInstance.transform.localScale = Vector3.one * m_IdolTransferScaleCurve.Evaluate(val);
+        }, 0f, 1f, 0.75f).setOnComplete(()=>
+            {
+                m_IdolTween = null; // safe???
+                Destroy(idolInstance.gameObject);
+                if (cb != null)
+                    cb();
+            }).setIgnoreTimeScale(true);
+    }
 }
