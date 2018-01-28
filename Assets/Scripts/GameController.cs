@@ -118,6 +118,7 @@ public class GameController : MonoBehaviour
                     break;
                 case GameState.Finished:
                     // on game over
+                    AudioManager.Instance.StopBGM();
                     AudioManager.Instance.PlaySFX("checkpoint", true);
                     Debug.Log("Game finished!");
                     _SetMenuState(m_GameFinishedMenu, true);

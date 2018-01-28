@@ -6,11 +6,13 @@ public class Bridge : Interactee
 
 	public override void Activated()
 	{
+        AudioManager.Instance.PlaySFX("stonemechanism", true);
 		transform.position += Vector3.right * ActivationLength;
 	}
 
 	public override void Deactivated()
 	{
-		transform.position -= Vector3.right * ActivationLength;
+        AudioManager.Instance.PlaySFX("stonemechanism", true);
+        transform.position -= Vector3.right * ActivationLength;
 	}
 }
