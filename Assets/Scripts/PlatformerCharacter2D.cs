@@ -161,6 +161,13 @@ public class PlatformerCharacter2D : MonoBehaviour
 			m_Anim.SetBool("Ground", false);
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 		}
+        if(m_Grounded)
+        {
+            if (m_Anim.GetCurrentAnimatorStateInfo(0).IsName("Walk"))
+            {
+                AudioManager.Instance.PlayFootsteps("walking", true);
+            }
+        }
 	}
 
 	private void Flip()

@@ -300,6 +300,7 @@ public class GameController : MonoBehaviour
 
             Time.timeScale = 1f;
         });
+        AudioManager.Instance.PlaySFX("passIdol", true);
     }
 
 #region BUTTON_CALLBACKS
