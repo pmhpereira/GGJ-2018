@@ -129,7 +129,8 @@ public class PlayerController : MonoBehaviour
 		}
 
         if(collider.name.Contains("End")){
-            m_Player.reachedEnd = true;
+            if(m_Player != null)
+                m_Player.reachedEnd = true;
         }
 	}
 

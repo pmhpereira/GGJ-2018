@@ -134,12 +134,11 @@ public class GameController : MonoBehaviour
         switch (m_CurrentGameState)
         {
             case GameState.Playing:
-
                 // setup right before  playing
                 //Debug.LogFormat("Player 1 life: {0}; Player 2 life: {1}", m_Players[0].life, m_Players[1].life);
                 _CheckGameOver();
                 _CheckTrade();
-
+                _CheckLevelEnded();
                 break;
             default:
                 break;
@@ -239,9 +238,20 @@ public class GameController : MonoBehaviour
         _LoadLevel(m_CurrentLevelIndex);
     }
 
+    private void _CheckLevelEnded(){
+
+        foreach (var player in m_Players)
+        {
+            if (player.reachedEnd && player.hasItem)
+            {
+                _ChangeState(GameState.Finished);
+                return;
+            }
+        }
+    }
+
     private void _CheckGameOver()
     {
-        int reachedEnd = 0;
         foreach (var player in m_Players)
         {
             if (player.life <= 0f)
@@ -249,13 +259,6 @@ public class GameController : MonoBehaviour
                 _ChangeState(GameState.GameOver);
                 return;
             }
-            if (player.reachedEnd)
-                reachedEnd++;
-        }
-        if (reachedEnd == m_PlayerGameObjects.Length) //both reached end
-        { 
-            _ChangeState(GameState.Finished);
-            return;
         }
     }
 
