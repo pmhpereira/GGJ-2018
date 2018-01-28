@@ -23,8 +23,8 @@ public class Elevator : Interactee
 
 	public override void Deactivated()
 	{
-        AudioManager.Instance.PlaySFX("ding", true);
-		yDirection = -yDirection;
+        AudioManager.Instance.PlaySFX("elevatormusic", true);
+        yDirection = -yDirection;
 	}
 
 	public void Start()
@@ -38,6 +38,8 @@ public class Elevator : Interactee
 	public void Update()
 	{
 		currentLength += -yDirection * speed * Time.deltaTime;
+        if (currentLength > maxLength || currentLength < minLength)
+            AudioManager.Instance.PlaySFX("ding", true);
 		currentLength = Mathf.Clamp(currentLength, minLength, maxLength);
 
 		cart.localPosition = startingTransform + Vector3.up * (startingHeight - currentLength);
