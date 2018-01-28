@@ -29,7 +29,7 @@ public class InteractionInfo : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(m_Player.currentInteractionInfo != m_ShowingInteraction){
+		if (m_Player != null && m_Player.currentInteractionInfo != m_ShowingInteraction){
             m_ShowingInteraction = m_Player.currentInteractionInfo;
 
             m_SpriteRenderer.sprite = _Find();

@@ -22,9 +22,6 @@ public class Platformer2DUserControl : MonoBehaviour
 	{
 		if (!m_Jump)
 			m_Jump = CrossPlatformInputManager.GetButtonDown(JumpBind);
-
-		if(!m_Climb)
-			m_Climb = CrossPlatformInputManager.GetButton(VerticalBind);
 	}
 
 	private void FixedUpdate()
@@ -33,6 +30,8 @@ public class Platformer2DUserControl : MonoBehaviour
 		bool crouch = Input.GetKey(KeyCode.LeftControl);
 		float h = CrossPlatformInputManager.GetAxis(HorizontalBind);
 		float v = CrossPlatformInputManager.GetAxis(VerticalBind);
+
+		m_Climb = (v != 0);
 
 		if (h != 0)
 			m_Climb = false;
