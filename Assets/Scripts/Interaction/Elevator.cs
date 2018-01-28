@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
-public class Elevator : MonoBehaviour
+public class Elevator : Interactee
 {
 	public int minLength;
 	public int maxLength;
@@ -13,6 +14,17 @@ public class Elevator : MonoBehaviour
 	private Vector3 startingTransform;
 
 	private Transform cart;
+
+	public override void Activated()
+	{
+		yDirection = -yDirection;
+	}
+
+	public override void Deactivated()
+	{
+
+		yDirection = -yDirection;
+	}
 
 	public void Start()
 	{
