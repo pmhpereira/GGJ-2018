@@ -73,6 +73,8 @@ public class PlatformerCharacter2D : MonoBehaviour
 		m_Anim.SetBool("Crouch", crouch);
 		/**/
 
+		m_Anim.SetFloat("vSpeed", 0);
+
 		if (climb)
 		{
 			if (!canClimb)
