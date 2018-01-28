@@ -13,6 +13,8 @@ public class AudioManager : MonoBehaviour
     private AudioSource m_BGM;
     [SerializeField]
     private AudioSource m_SFX;
+    [SerializeField]
+    private AudioSource m_FootstepAudioSource;
 
     private void Awake()
     {
@@ -75,7 +77,7 @@ public class AudioManager : MonoBehaviour
             if (force)
                 m_SFX.Stop();
             else if (m_SFX.isPlaying)
-                    return;
+                return;
 
             AudioClip newClip = (AudioClip)Resources.Load("SFX/" + name);
             if (newClip != null)
@@ -83,6 +85,21 @@ public class AudioManager : MonoBehaviour
                 m_SFX.clip = newClip;
                 m_SFX.Play();
             }
+        }
+    }
+
+    AudioClip footSteps;
+    public void PlayFootsteps(string name, bool force = false)
+    {
+        bool isPlayingFootsteps = m_FootstepAudioSource.isPlaying && m_FootstepAudioSource.clip.name == name;
+        if (isPlayingFootsteps)
+            return;
+        if(footSteps == null) 
+            footSteps = (AudioClip)Resources.Load("SFX/" + name);
+        if (footSteps != null)
+        {
+            m_FootstepAudioSource.clip = footSteps;
+            m_FootstepAudioSource.Play();
         }
     }
 }
