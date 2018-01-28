@@ -114,12 +114,14 @@ public class PlayerController : MonoBehaviour
             }
 		}
 
-		//some specific input..
-		//if (Input.GetKeyDown(KeyCode.I))
-			//m_Player.hasItem = !m_Player.hasItem;
+        //some specific input..
+        //if (Input.GetKeyDown(KeyCode.I))
+        //m_Player.hasItem = !m_Player.hasItem;
 
-        if (Input.GetButtonDown(string.Format("P{0}_Switch", /*m_Player.playerIndex+1*/ PlayerIndex)))
-            m_Player.wantsSwitch = !m_Player.wantsSwitch;
+        if (Input.GetButton(string.Format("P{0}_Switch", /*m_Player.playerIndex+1*/ PlayerIndex)))
+            m_Player.wantsSwitch = true;
+        else
+            m_Player.wantsSwitch = false;
 	}
 
 	private void OnTriggerEnter2D(Collider2D collider)

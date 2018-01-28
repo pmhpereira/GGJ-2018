@@ -10,11 +10,13 @@ public class Platformer2DUserControl : MonoBehaviour
 	public string VerticalBind = "Vertical";
 
 	private PlatformerCharacter2D m_Character;
+    private PlayerController m_PlayerController;
 	private bool m_Jump;
 	private bool m_Climb;
 
 	private void Awake()
 	{
+        m_PlayerController = GetComponent<PlayerController>();
 		m_Character = GetComponent<PlatformerCharacter2D>();
 	}
 
@@ -26,6 +28,9 @@ public class Platformer2DUserControl : MonoBehaviour
 
 	private void FixedUpdate()
 	{
+        if (m_PlayerController.player.wantsSwitch && m_Character.isGrounded)
+            return;
+
 		// Read the inputs.
 		bool crouch = Input.GetKey(KeyCode.LeftControl);
 		float h = CrossPlatformInputManager.GetAxis(HorizontalBind);
