@@ -1,0 +1,67 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class AudioManager : MonoBehaviour
+{
+
+    private static AudioManager s_Instance;
+    public static AudioManager Instance { get { return s_Instance; }}
+
+
+    [SerializeField]
+    private AudioSource m_BGM;
+    [SerializeField]
+    private AudioSource m_SFX;
+
+    private void Awake()
+    {
+        s_Instance = this;
+    }
+
+    // Use this for initialization
+    void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+
+    public void PlayBGM(string name, bool force = false){
+
+        if (m_BGM != null)
+        {
+            if (force)
+                m_SFX.Stop();
+            else if (m_SFX.isPlaying)
+                return;
+
+            AudioClip newClip = (AudioClip)Resources.Load("BGM/" + name);
+            if (newClip != null)
+            {
+                m_SFX.clip = newClip;
+                m_SFX.Play();
+            }
+        }
+
+    }
+
+    public void PlaySFX(string name, bool force = false){
+        if(m_SFX != null){
+
+            if (force)
+                m_SFX.Stop();
+            else if (m_SFX.isPlaying)
+                    return;
+
+            AudioClip newClip = (AudioClip)Resources.Load("SFX/" + name);
+            if (newClip != null)
+            {
+                m_SFX.clip = newClip;
+                m_SFX.Play();
+            }
+        }
+    }
+}

@@ -92,12 +92,17 @@ public class GameController : MonoBehaviour
                     _SetMenuState(m_MainMenu, true);
                     Time.timeScale = 0f;
 
+                    AudioManager.Instance.PlaySFX("elevatormusic", true);
+
+
                     break;
                 case GameState.Playing:
                     // setup right before  playing
                     m_Hud.gameObject.SetActive(true);
                     _SetMenuState(m_MainMenu, false);
                     Time.timeScale = 1f;
+
+                    AudioManager.Instance.PlaySFX("ding", true);
 
                     break;
                 case GameState.Paused:
