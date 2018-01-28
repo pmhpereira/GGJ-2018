@@ -92,8 +92,7 @@ public class GameController : MonoBehaviour
                     _SetMenuState(m_MainMenu, true);
                     Time.timeScale = 0f;
 
-                    AudioManager.Instance.PlaySFX("elevatormusic", true);
-
+                    AudioManager.Instance.PlayBGM("menu", true, true);
 
                     break;
                 case GameState.Playing:
@@ -102,7 +101,7 @@ public class GameController : MonoBehaviour
                     _SetMenuState(m_MainMenu, false);
                     Time.timeScale = 1f;
 
-                    AudioManager.Instance.PlaySFX("ding", true);
+                    AudioManager.Instance.PlayLevelStart();
 
                     break;
                 case GameState.Paused:

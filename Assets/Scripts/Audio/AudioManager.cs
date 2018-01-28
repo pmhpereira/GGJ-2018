@@ -29,7 +29,22 @@ public class AudioManager : MonoBehaviour
 		
 	}
 
-    public void PlayBGM(string name, bool force = false){
+    public void PlayLevelStart(){
+        StartCoroutine(PlayIntro());
+    }
+
+    IEnumerator PlayIntro(){
+
+        PlayBGM("gameIntro", true);
+
+        while(m_BGM.isPlaying){
+            yield return new WaitForEndOfFrame();
+        }
+
+        PlayBGM("gameLoop", true, true);
+    }
+
+    public void PlayBGM(string name, bool force = false, bool loop = false){
 
         if (m_BGM != null)
         {
@@ -42,6 +57,7 @@ public class AudioManager : MonoBehaviour
             if (newClip != null)
             {
                 m_BGM.clip = newClip;
+                m_BGM.loop = loop;
                 m_BGM.Play();
             }
         }
