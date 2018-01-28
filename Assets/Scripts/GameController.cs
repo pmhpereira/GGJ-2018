@@ -48,6 +48,11 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private Data.LevelPair[] m_LevelsPrefabs;
 
+    [SerializeField]
+    private Transform m_Player1Level;
+    [SerializeField]
+    private Transform m_Player2Level;
+
     private Transform m_LastMenu;
 
     private int m_CurrentLevelIndex = 0;
@@ -207,23 +212,23 @@ public class GameController : MonoBehaviour
 
     private void _LoadLevel(int levelIndex, bool force = false)
     {
-        if (m_CurrentLevelIndex != levelIndex)
-        {
-            m_CurrentLevel.DestroyLevels();
-        }
-        var newLevelsPair = m_LevelsPrefabs[m_CurrentLevelIndex];
-        var p1LevelInstance = Instantiate(newLevelsPair.p1Level, m_Player1Container.transform);
-        var p2LevelInstance = Instantiate(newLevelsPair.p2Level, m_Player2Container.transform);
-        m_CurrentLevel = new Data.LevelPair();
-        m_CurrentLevel.p1Level = p1LevelInstance;
-        m_CurrentLevel.p2Level = p2LevelInstance;
+        //if (m_CurrentLevelIndex != levelIndex)
+        //{
+        //    m_CurrentLevel.DestroyLevels();
+        //}
+        //var newLevelsPair = m_LevelsPrefabs[m_CurrentLevelIndex];
+        //var p1LevelInstance = Instantiate(newLevelsPair.p1Level, m_Player1Container.transform);
+        //var p2LevelInstance = Instantiate(newLevelsPair.p2Level, m_Player2Container.transform);
+        //m_CurrentLevel = new Data.LevelPair();
+        //m_CurrentLevel.p1Level = p1LevelInstance;
+        //m_CurrentLevel.p2Level = p2LevelInstance;
 
         ////doubel check this
         //m_CurrentLevel.p1Level.transform.localPosition = Vector3.one * -10f;
         //m_CurrentLevel.p2Level.transform.localPosition = Vector3.one * -10f;
 
-        var p1StartPoint = p1LevelInstance.GetComponent<StartPoint>();
-        var p2StartPoint = p2LevelInstance.GetComponent<StartPoint>();
+        var p1StartPoint = m_Player1Level.GetComponent<StartPoint>();
+        var p2StartPoint = m_Player2Level.GetComponent<StartPoint>();
 
         if (p1StartPoint != null && p2StartPoint != null)
         {
