@@ -108,8 +108,11 @@ public class PlayerController : MonoBehaviour
             {
                 var cena = m_Handle.GetType();
 
-                if (cena == typeof(Lever))
-                    AudioManager.Instance.PlaySFX("lever", false);
+                if (cena == typeof(Lever) && m_Player.currentInteractionInfo == Data.Player.Interaction.Interactable)
+                {
+                    Debug.Log("autismo");
+                    AudioManager.Instance.PlaySFX("lever", true);
+                }
 
                 if(!m_Player.hasItem)
                     m_Handle.ManualToggle();

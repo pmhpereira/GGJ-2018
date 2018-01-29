@@ -69,6 +69,16 @@ public class AudioManager : MonoBehaviour
 
     }
 
+    public void controlBGMVolume(float volume)
+    {
+        if (m_SFX.isPlaying && m_SFX.clip.name == "elevatormusic")
+        {
+            m_BGM.volume = Mathf.Clamp(volume, 0, 1);
+        }
+        else
+            m_BGM.volume = 1f;
+    }
+
     public void PlaySFX(string name, bool force = false){
         if(m_SFX != null){
 
