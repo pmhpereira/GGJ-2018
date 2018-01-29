@@ -15,16 +15,21 @@ public class Elevator : Interactee
 	private Vector3 startingTransform;
 
 	private Transform cart;
+    private bool moved = false;
 
 	public override void Activated()
 	{
         AudioManager.Instance.PlaySFX("elevatormusic", true);
-		yDirection = -yDirection;
+        AudioManager.Instance.controlBGMVolume(0.1f);
+        moved = true;
+        yDirection = -yDirection;
 	}
 
 	public override void Deactivated()
-	{
+    {
         AudioManager.Instance.PlaySFX("elevatormusic", true);
+        AudioManager.Instance.controlBGMVolume(0.1f);
+        moved = true;
         yDirection = -yDirection;
 	}
 
@@ -40,10 +45,14 @@ public class Elevator : Interactee
 	public void Update()
 	{
 		currentLength += -yDirection * speed * Time.deltaTime;
-        if ( prevlength == currentLength && (currentLength > maxLength || currentLength < minLength))
-            AudioManager.Instance.PlaySFX("ding", true);
 		currentLength = Mathf.Clamp(currentLength, minLength, maxLength);
         prevlength = currentLength;
 		cart.localPosition = startingTransform + Vector3.up * (startingHeight - currentLength);
-	}
+        if ((currentLength == maxLength || currentLength == minLength) && moved)
+        {
+            moved = false;
+            AudioManager.Instance.PlaySFX("ding", true);
+            AudioManager.Instance.controlBGMVolume(1f);
+        }
+    }
 }
