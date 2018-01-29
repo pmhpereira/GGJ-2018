@@ -249,7 +249,7 @@ public class GameController : MonoBehaviour
 
         foreach (var player in m_Players)
         {
-            if (player.reachedEnd && player.hasItem)
+            if (player.reachedEnd)
             {
                 _ChangeState(GameState.Finished);
                 return;
