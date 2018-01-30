@@ -143,7 +143,7 @@ public class PlatformerCharacter2D : MonoBehaviour
             bool stuck = hMove != 0f && m_Rigidbody2D.velocity.x == 0f && !isGrounded;
 
             // Move the character
-            m_Rigidbody2D.velocity = new Vector2(stuck ? 0f : (hMove * m_MaxRunningSpeed), m_Rigidbody2D.velocity.y);
+            m_Rigidbody2D.velocity = new Vector2((hMove * m_MaxRunningSpeed), m_Rigidbody2D.velocity.y);
 
             // If the input is moving the player right and the player is facing left...
             if (hMove > 0 && m_FacingRight)

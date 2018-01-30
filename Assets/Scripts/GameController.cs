@@ -149,7 +149,7 @@ public class GameController : MonoBehaviour
                 break;
         }
 
-
+/** /
 #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.P))
             OnPause();
@@ -161,6 +161,7 @@ public class GameController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.T))
             TransferIdol();
 #endif
+/**/
     }
 
     private void _CheckTrade()
