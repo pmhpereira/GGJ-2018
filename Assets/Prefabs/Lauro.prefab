@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 114783577332461094}
   - component: {fileID: 114369226931429104}
   - component: {fileID: 114603230798060112}
+  - component: {fileID: 58305371083053282}
   m_Layer: 0
   m_Name: Lauro
   m_TagString: Player
@@ -156,13 +157,28 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!58 &58305371083053282
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1311448350897848}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.05, y: -0.35}
+  serializedVersion: 2
+  m_Radius: 0.15
 --- !u!61 &61648005031588798
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1311448350897848}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0

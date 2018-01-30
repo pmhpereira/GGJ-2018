@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114684967418972114}
   - component: {fileID: 114050683508242558}
   - component: {fileID: 114634684450231576}
+  - component: {fileID: 58547052751519506}
   m_Layer: 0
   m_Name: Laura
   m_TagString: Player
@@ -156,13 +157,28 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!58 &58547052751519506
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293452589199106}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.05, y: -0.35}
+  serializedVersion: 2
+  m_Radius: 0.15
 --- !u!61 &61075124759199752
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1293452589199106}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
